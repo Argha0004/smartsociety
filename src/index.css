@@ -19,7 +19,7 @@
 }
 
 .outfit {
-    font-family: "Outfit", cursive;
+    font-family: "Outfit", sans-serif;
 }
 
 
@@ -360,4 +360,39 @@
     to {
         transform: translateX(-50%);
     }
+}
+
+/*--------------------------------------------------------FOOTER--------------------------------------------------------*/
+
+.footer {
+    position: relative;
+}
+
+/* Top decorative line */
+
+.footer-top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        #7A352F 20%,
+        #EFD8B7 50%,
+        #7A352F 80%,
+        transparent 100%
+    );
+
+    opacity: 0.6;
+}
+
+
+/* Bottom divider */
+
+.footer-divider {
+    border-top: 1px solid #7A352F;
+    opacity: 0.35;
 }
