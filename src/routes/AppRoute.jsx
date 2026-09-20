@@ -10,6 +10,10 @@ import Rules from "../pages/Rule";
 import Jury from "../pages/Jury";
 import ContactUs from "../pages/ContactUs";
 
+// Auth Pages
+import Register from "../pages/auth/Register";
+
+
 function AppRoute() {
     return (
         <BrowserRouter>
@@ -45,6 +49,13 @@ function AppRoute() {
                     <Route
                         path="/contact-us"
                         element={<ContactUs />}
+                    />
+
+                    
+                    {/* Auth */}
+                    <Route
+                        path="/register"
+                        element={<Register />}
                     />
                 </Route>
 
