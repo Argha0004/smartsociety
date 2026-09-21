@@ -1,0 +1,77 @@
+{
+  "rules": {
+    "page": {
+      "badge": "CFCCF 2027 · KOLKATA, INDIA",
+      "title": "RULES & REGULATIONS",
+      "description": "Organised by IEM-UEM Group, SMART Society (USA), Bengal Heritage Foundation & Forum for Film Studies and Allied Arts"
+    },
+    "sections": [
+      {
+        "id": "general",
+        "buttonLabel": "GENERAL RULES",
+        "heading": "A. GENERAL RULES",
+        "intro": "The following rules apply to all films submitted to the festival.",
+        "rules": [
+          "The festival is open to filmmakers from India and abroad.",
+          "Films must be submitted in accordance with the prescribed submission guidelines.",
+          "The submitted film must be the original work of the filmmaker or submitting organisation.",
+          "The applicant is responsible for obtaining all necessary rights and permissions for the submitted film.",
+          "The festival committee reserves the right to accept or reject any submission.",
+          "The decision of the selection committee shall be final.",
+          "Selected films may be screened during the festival and used for festival-related promotional activities.",
+          "Submission of a film implies acceptance of all festival rules and regulations."
+        ]
+      },
+      {
+        "id": "competitive",
+        "buttonLabel": "COMPETITIVE SECTION",
+        "heading": "B. COMPETITIVE SECTION",
+        "intro": "Films entered into the competitive section must comply with the following requirements.",
+        "rules": [
+          "Films entered in the competitive section will be considered for the respective festival awards.",
+          "The selection committee will determine the films eligible for competition.",
+          "A film may be entered into only the category applicable to its format and subject.",
+          "The jury's decision regarding awards shall be final and binding.",
+          "The festival organisers reserve the right to withdraw an award in case of violation of festival regulations.",
+          "Awards and certificates will be presented according to the final jury decisions."
+        ]
+      }
+    ],
+    "keyDates": {
+      "submissionDeadline": {
+        "label": "SUBMISSION DEADLINE",
+        "date": "31 Oct 2026"
+      },
+      "festivalDate": {
+        "label": "FESTIVAL DATE",
+        "date": "9 January 2027",
+        "location": "Kolkata, India"
+      },
+      "registerButton": {
+        "label": "REGISTER NOW",
+        "path": "/register"
+      }
+    }
+  },
+  "about": {
+    "page": {
+      "badge": "OUR PARTNERS",
+      "title": "ABOUT US",
+      "description": "A collaboration between Bengal Heritage Foundation, The Forum for Film Studies & Allied Arts, and SMART Society — united by the love of cinema."
+    },
+    "partners": [
+      {
+        "id": "forum-for-film-studies",
+        "title": "FORUM FOR FILM STUDIES & ALLIED ARTS — KOLKATA",
+        "description": "The Forum for Film Studies and Allied Arts, Kolkata, promotes cinema through festivals, screenings, and tributes. Collaborating with embassies and institutions like Instituto Cervantes and SRFTI, it showcases international and Indian films and honors filmmakers such as Buddhadeb Dasgupta.",
+        "logo": "/assets/forum-logo.png"
+      },
+      {
+        "id": "smart-society",
+        "title": "SMART SOCIETY — USA & CANADA",
+        "description": "SMART Society is a US and Canada-based non-profit society aiming to create a pool of unique ideas and thoughts through power-packed talks. It serves as a platform for Markers, Artists, Researchers, and Technologists to bring forth their views to the world.",
+        "logo": "/assets/smart-logo.png"
+      }
+    ]
+  }
+}

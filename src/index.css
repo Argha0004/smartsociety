@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+:root {
+    --bg-base: #710D0D;
+    --bg-deep: #1C0A0A;
+    --bg-card: #2A1212;
+    --bg-card-hover: #331515;
+    --brick: #8B2E2E;
+    --brick-light: #A83535;
+    --brick-dark: #5C1C1C;
+    --brick-muted: rgba(139, 46, 46, 0.45);
+    --cream: #EDD9B5;
+    --cream-light: #F5EDE0;
+    --cream-dark: #C9B48A;
+    --cream-muted: rgba(237, 217, 181, 0.55);
+    --text-primary: #F5EDE0;
+    --text-muted: rgba(245, 237, 224, 0.55);
+    --text-faint: rgba(245, 237, 224, 0.3);
+    --glow-brick: rgba(139, 46, 46, 0.5);
+    --glow-cream: rgba(237, 217, 181, 0.4);
+    --glass-bg: rgba(30, 10, 10, 0.72);
+    --glass-border: rgba(237, 217, 181, 0.15);
+}
+
 /*----------------------------------------------------------------FONTS----------------------------------------------------------------*/
 
 .poppins {
@@ -28,15 +50,15 @@
 /* Primary / Brand */
 
 .bg-primary {
-    background-color: #5B0F0F;
+    background-color: #710D0D;
 }
 
 .bg-primary-dark {
-    background-color: #240506;
+    background-color: #1C0A0A;
 }
 
 .bg-primary-light {
-    background-color: #7A352F;
+    background-color: #8B2E2E;
 }
 
 /* Secondary / Blue */
@@ -56,11 +78,11 @@
 /* Accent / Warm */
 
 .bg-accent {
-    background-color: #D9A05C;
+    background-color: #EDD9B5;
 }
 
 .bg-accent-light {
-    background-color: #EFD8B7;
+    background-color: #F5EDE0;
 }
 
 /* Supporting colors */
@@ -99,15 +121,15 @@
 /* Primary / Brand */
 
 .text-primary {
-    color: #5B0F0F;
+    color: #F5EDE0;
 }
 
 .text-primary-dark {
-    color: #240506;
+    color: #C9B48A;
 }
 
 .text-primary-light {
-    color: #7A352F;
+    color: #A83535;
 }
 
 /* Secondary / Blue */
@@ -127,11 +149,11 @@
 /* Accent / Warm */
 
 .text-accent {
-    color: #D9A05C;
+    color: #EDD9B5;
 }
 
 .text-accent-light {
-    color: #EFD8B7;
+    color: #F5EDE0;
 }
 
 /* Supporting colors */
@@ -172,15 +194,15 @@
 /*--------------------------------------------------------BORDERS--------------------------------------------------------*/
 
 .border-primary {
-    border-color: #5B0F0F;
+    border-color: #8B2E2E;
 }
 
 .border-primary-dark {
-    border-color: #240506;
+    border-color: #5C1C1C;
 }
 
 .border-primary-light {
-    border-color: #7A352F;
+    border-color: rgba(237, 217, 181, 0.15);
 }
 
 .border-secondary {
@@ -196,19 +218,19 @@
 }
 
 .border-accent {
-    border-color: #D9A05C;
+    border-color: #EDD9B5;
 }
 
 .border-accent-light {
-    border-color: #EFD8B7;
+    border-color: #F5EDE0;
 }
 
 .border-beige {
-    border-color: #E5C8AF;
+    border-color: #C9B48A;
 }
 
 .border-rose {
-    border-color: #B87A72;
+    border-color: #8B2E2E;
 }
 
 .border-purple {
@@ -224,7 +246,7 @@
 }
 
 .border-black {
-    border-color: #240506;
+    border-color: #5C1C1C;
 }
 
 
@@ -233,12 +255,12 @@
 /* Primary Button */
 
 .btn-primary {
-    background-color: #5B0F0F;
-    color: #FFFFFF;
+    background-color: #8B2E2E;
+    color: #F5EDE0;
 }
 
 .btn-primary:hover {
-    background-color: #240506;
+    background-color: #5C1C1C;
 }
 
 /* Secondary Button */
@@ -255,25 +277,26 @@
 /* Accent Button */
 
 .btn-accent {
-    background-color: #D9A05C;
-    color: #FFFFFF;
+    background-color: #EDD9B5;
+    color: #1C0A0A;
 }
 
 .btn-accent:hover {
-    background-color: #97524F;
+    background-color: #C9B48A;
 }
 
 /* Outline Button */
 
 .btn-outline {
     background-color: transparent;
-    color: #5B0F0F;
-    border: 1px solid #5B0F0F;
+    color: #EDD9B5;
+    border: 1px solid rgba(237, 217, 181, 0.15);
 }
 
 .btn-outline:hover {
-    background-color: #5B0F0F;
-    color: #FFFFFF;
+    background-color: #8B2E2E;
+    color: #F5EDE0;
+    border-color: #EDD9B5;
 }
 
 
@@ -307,10 +330,9 @@
 /*--------------------------------------------------------GRADIENTS--------------------------------------------------------*/
 
 .bg-brand-gradient {
-    background: linear-gradient(135deg,
-            #5B0F0F 0%,
-            #7A352F 50%,
-            #240506 100%);
+    background: linear-gradient(180deg,
+            #710D0D 0%,
+            #1C0A0A 100%);
 }
 
 .bg-blue-gradient {
@@ -321,10 +343,9 @@
 
 .bg-warm-gradient {
     background: linear-gradient(135deg,
-            #EFD8B7 0%,
-            #D9A05C 100%);
+            #F5EDE0 0%,
+            #EDD9B5 100%);
 }
-
 
 /*--------------------------------------------------------ANIMATIONS--------------------------------------------------------*/
 
