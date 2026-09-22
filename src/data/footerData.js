@@ -1,4 +1,4 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaExternalLinkAlt } from "react-icons/fa";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 // =========================
@@ -86,7 +86,7 @@ export const contactInfo = {
 export const legalLinks = [
   {
     label: "Privacy Policy",
-    path: "/privacy-policy",
+    path: "/#",
   },
   {
     label: "Terms of Service",

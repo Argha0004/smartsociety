@@ -107,7 +107,7 @@ function Button({
                 rounded-lg
                 border
                 border-primary-light
-                bg-primary-light
+                
                 font-semibold
                 tracking-wide
                 text-accent-light
