@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import MainContainer from "../constant/MainContainer";
 
 function MainLayouts() {
     return (
@@ -11,18 +11,14 @@ function MainLayouts() {
             <Header />
 
             {/* Page Content */}
-            <main className="flex-1">
-                <MainContainer>
-                    <Outlet />
-                </MainContainer>
+            <main className="flex-1 w-full">
+                <Outlet />
             </main>
 
             {/* Footer */}
             <Footer />
-
-
         </div>
     );
 }
 
-export default MainLayouts; 
+export default MainLayouts;

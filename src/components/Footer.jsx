@@ -10,32 +10,32 @@ function Footer() {
   return (
     <footer
       className="
-        footer
-        w-full
-        bg-primary-dark
-        text-white
+                footer
+                w-full
+                bg-primary-dark
+                text-white
 
-        lg:h-[525px]
-        xl:h-[525px]
-    "
+                lg:h-131.25
+                xl:h-131.25
+            "
     >
 
       {/* =================================================
-                            TOP DECORATIVE LINE
+                                TOP DECORATIVE LINE
                 ================================================= */}
 
       <div className="footer-top-line" />
 
 
       {/* =================================================
-                            MAIN FOOTER
+                                MAIN FOOTER
                 ================================================= */}
 
       <div
         className="
                     mx-auto
                     w-full
-                    max-w-[1200px]
+                    max-w-300
                     px-4
                     sm:px-6
                     md:px-8
@@ -46,40 +46,40 @@ function Footer() {
 
         <div
           className="
-        flex
-        flex-col
-        gap-10
-        py-10
+                        flex
+                        flex-col
+                        gap-10
+                        py-10
 
-        sm:gap-12
-        sm:py-12
+                        sm:gap-12
+                        sm:py-12
 
-        md:flex-row
-        md:flex-wrap
-        md:gap-y-12
+                        md:flex-row
+                        md:flex-wrap
+                        md:gap-y-12
 
-        lg:h-[445px]
-        lg:flex-nowrap
-        lg:items-start
-        lg:justify-between
-        lg:gap-8
-        lg:py-14
+                        lg:h-111.25
+                        lg:flex-nowrap
+                        lg:items-start
+                        lg:justify-between
+                        lg:gap-8
+                        lg:py-14
 
-        xl:h-[445px]
-        xl:gap-12
-        xl:py-16
-    "
+                        xl:h-111.25
+                        xl:gap-12
+                        xl:py-16
+                    "
         >
 
           {/* =================================================
-                                    ABOUT CFCCF
+                                            ABOUT CFCCF
                         ================================================= */}
 
           <div
             className="
                             w-full
 
-                            sm:max-w-[500px]
+                            sm:max-w-125
 
                             md:w-[48%]
                             md:max-w-none
@@ -99,6 +99,7 @@ function Footer() {
                                 uppercase
                                 tracking-wide
                                 text-accent-light
+                                text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
 
                                 sm:text-xl
                                 md:mb-6
@@ -125,7 +126,7 @@ function Footer() {
 
 
             {/* =========================
-                                SOCIAL LINKS
+                                    SOCIAL LINKS
                             ========================= */}
 
             <div className="mt-6 flex gap-3 sm:mt-7">
@@ -149,8 +150,12 @@ function Footer() {
                                             border
                                             border-accent
                                             text-accent-light
-                                            transition
 
+                                            transition-all
+                                            duration-300
+                                            ease-in-out
+
+                                            hover:scale-110
                                             hover:bg-primary
                                             hover:text-white
 
@@ -159,7 +164,13 @@ function Footer() {
                                         "
                   >
                     <Icon
-                      className="h-5 w-5"
+                      className="
+                                                h-6
+                                                w-6
+                                                transition-transform
+                                                duration-300
+                                                ease-in-out
+                                            "
                       strokeWidth={1.8}
                     />
                   </a>
@@ -170,7 +181,7 @@ function Footer() {
 
 
             {/* =========================
-                                CREDITS
+                                    CREDITS
                             ========================= */}
 
             <p
@@ -192,7 +203,7 @@ function Footer() {
 
 
           {/* =================================================
-                                    QUICK LINKS
+                                            QUICK LINKS
                         ================================================= */}
 
           <div
@@ -218,6 +229,7 @@ function Footer() {
                                 uppercase
                                 tracking-wide
                                 text-accent-light
+                                text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
 
                                 sm:text-xl
                                 md:mb-6
@@ -241,7 +253,8 @@ function Footer() {
                                                 text-sm
                                                 font-medium
                                                 text-white/70
-                                                transition
+                                                transition-colors
+                                                duration-300
 
                                                 hover:text-accent-light
 
@@ -263,7 +276,7 @@ function Footer() {
 
 
           {/* =================================================
-                                    GET IN TOUCH
+                                            GET IN TOUCH
                         ================================================= */}
 
           <div
@@ -289,6 +302,7 @@ function Footer() {
                                 uppercase
                                 tracking-wide
                                 text-accent-light
+                                text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
 
                                 sm:text-xl
                                 md:mb-6
@@ -345,8 +359,13 @@ function Footer() {
                     key={email}
                     href={`mailto:${email}`}
                     className="
-                                            transition
+                                            transition-all
+                                            duration-300
+                                            ease-in-out
+
                                             hover:text-accent-light
+                                            
+                                            
                                         "
                   >
                     {email}
@@ -392,9 +411,6 @@ function Footer() {
                                     text-sm
                                     font-medium
                                     text-white/70
-                                    transition
-
-                                    hover:text-accent-light
 
                                     sm:text-[15px]
                                 "
@@ -462,14 +478,14 @@ function Footer() {
 
 
           {/* =================================================
-                                    EVENT INFO
+                                            EVENT INFO
                         ================================================= */}
 
           <div
             className="
                             w-full
 
-                            sm:max-w-[500px]
+                            sm:max-w-125
 
                             md:w-[48%]
                             md:max-w-none
@@ -489,6 +505,7 @@ function Footer() {
                                 uppercase
                                 tracking-wide
                                 text-accent-light
+                                text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
 
                                 sm:text-xl
                                 md:mb-6
@@ -500,20 +517,20 @@ function Footer() {
 
             <div
               className="
-                                h-[220px]
+                                h-55
                                 w-full
                                 overflow-hidden
                                 rounded-xl
                                 border
                                 border-accent
 
-                                sm:h-[240px]
+                                sm:h-60
 
-                                md:h-[230px]
+                                md:h-57.5
 
-                                lg:h-[250px]
+                                lg:h-62.5
 
-                                xl:h-[255px]
+                                xl:h-63.75
                             "
             >
 
@@ -534,15 +551,15 @@ function Footer() {
 
 
       {/* =================================================
-                            BOTTOM FOOTER
+                                BOTTOM FOOTER
                 ================================================= */}
 
       <div
         className="
-        footer-divider
-        lg:h-[80px]
-        xl:h-[80px]
-    "
+                    footer-divider
+                    lg:h-20
+                    xl:h-20
+                "
       >
 
         <div
@@ -550,7 +567,7 @@ function Footer() {
                         mx-auto
                         flex
                         w-full
-                        max-w-[1200px]
+                        max-w-300
                         flex-col
                         gap-4
                         px-4
@@ -571,17 +588,18 @@ function Footer() {
         >
 
           {/* =========================
-                                LEGAL LINKS
-                        ========================= */}
+                                    LEGAL LINKS
+                            ========================= */}
 
           <div
             className="
                             flex
                             flex-wrap
+                            justify-center
+                            items-center
                             gap-x-5
                             gap-y-2
-                            justify-center 
-                            items-center
+
                             sm:gap-x-6
                         "
           >
@@ -594,7 +612,8 @@ function Footer() {
                 className="
                                     text-xs
                                     text-accent-light
-                                    transition
+                                    transition-colors
+                                    duration-300
 
                                     hover:text-accent-light
 
@@ -607,8 +626,12 @@ function Footer() {
             ))}
 
           </div>
+
+
           <p
-            className=" flex justify-center
+            className="
+                            flex
+                            justify-center
                             font-serif
                             text-xs
                             tracking-wide
@@ -619,7 +642,6 @@ function Footer() {
           >
             © CFCCF 2027 IN KOLKATA
           </p>
-
 
         </div>
 
