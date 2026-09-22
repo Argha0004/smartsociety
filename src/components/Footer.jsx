@@ -5,6 +5,7 @@ import {
   legalLinks,
 } from "../data/footerData";
 
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -19,17 +20,11 @@ function Footer() {
                 xl:h-131.25
             "
     >
-
-      {/* =================================================
-                                TOP DECORATIVE LINE
-                ================================================= */}
+      {/* Top Decorative Line */}
 
       <div className="footer-top-line" />
 
-
-      {/* =================================================
-                                MAIN FOOTER
-                ================================================= */}
+      {/* Main Footer */}
 
       <div
         className="
@@ -43,7 +38,6 @@ function Footer() {
                     xl:px-0
                 "
       >
-
         <div
           className="
                         flex
@@ -70,10 +64,7 @@ function Footer() {
                         xl:py-16
                     "
         >
-
-          {/* =================================================
-                                            ABOUT CFCCF
-                        ================================================= */}
+          {/* About CFCCF */}
 
           <div
             className="
@@ -89,7 +80,6 @@ function Footer() {
                             xl:w-[27%]
                         "
           >
-
             <h3
               className="
                                 mb-5
@@ -108,7 +98,6 @@ function Footer() {
               About CFCCF
             </h3>
 
-
             <p
               className="
                                 text-sm
@@ -124,15 +113,10 @@ function Footer() {
               content creation in the City of Joy.
             </p>
 
-
-            {/* =========================
-                                    SOCIAL LINKS
-                            ========================= */}
+            {/* Social Links */}
 
             <div className="mt-6 flex gap-3 sm:mt-7">
-
               {socialLinks.map((social) => {
-
                 const Icon = social.icon;
 
                 return (
@@ -167,22 +151,15 @@ function Footer() {
                       className="
                                                 h-6
                                                 w-6
-                                                transition-transform
-                                                duration-300
-                                                ease-in-out
                                             "
                       strokeWidth={1.8}
                     />
                   </a>
                 );
               })}
-
             </div>
 
-
-            {/* =========================
-                                    CREDITS
-                            ========================= */}
+            {/* Credits */}
 
             <p
               className="
@@ -195,89 +172,87 @@ function Footer() {
               Made with love by{" "}
 
               <b className="text-accent-light">
-                Souherdya Sarkar, Debangkita Saha, Aramya Rath
+                Souherdya Sarkar, Debangkita Saha, Aranya Rath
               </b>
             </p>
-
           </div>
 
-
-          {/* =================================================
-                                            QUICK LINKS
-                        ================================================= */}
+          {/* Quick Links */}
 
           <div
             className="
-                            w-full
+    w-full
 
-                            sm:w-auto
+    sm:w-auto
 
-                            md:w-[48%]
+    md:w-[48%]
 
-                            lg:w-[17%]
+    lg:w-[17%]
 
-                            xl:w-[17%]
-                        "
+    xl:w-[17%]
+  "
           >
-
             <h3
               className="
-                                mb-5
-                                font-serif
-                                text-lg
-                                font-semibold
-                                uppercase
-                                tracking-wide
-                                text-accent-light
-                                text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
+      mb-5
+      font-serif
+      text-lg
+      font-semibold
+      uppercase
+      tracking-wide
+      text-accent-light
+      text-shadow-[0_0_10px_rgba(245,237,224,0.45)]
 
-                                sm:text-xl
-                                md:mb-6
-                            "
+      sm:text-xl
+      md:mb-6
+    "
             >
               Quick Links
             </h3>
 
-
             <nav>
-
               <ul className="ml-4 flex flex-col gap-3">
-
                 {quickLinks.map((link) => (
-
                   <li key={link.label}>
-
                     <a
-                      href={link.path}
+                      href="#"
                       className="
-                                                text-sm
-                                                font-medium
-                                                text-white/70
-                                                transition-colors
-                                                duration-300
-
-                                                hover:text-accent-light
-
-                                                sm:text-base
-                                            "
+              group
+              inline-flex
+              items-center
+              gap-2
+              text-sm
+              font-medium
+              text-(--text-muted)
+              transition-colors
+              duration-300
+              ease-in-out
+              hover:text-(--cream-light)
+              sm:text-base
+            "
                     >
+                      <FaExternalLinkAlt
+                        className="
+                h-2.5
+                w-2.5
+                shrink-0
+                opacity-0
+                transition-opacity
+                duration-300
+                ease-in-out
+                group-hover:opacity-100
+              "
+                      />
+
                       {link.label}
                     </a>
-
                   </li>
-
                 ))}
-
               </ul>
-
             </nav>
-
           </div>
 
-
-          {/* =================================================
-                                            GET IN TOUCH
-                        ================================================= */}
+          {/* Get In Touch */}
 
           <div
             className="
@@ -292,7 +267,6 @@ function Footer() {
                             xl:w-[26%]
                         "
           >
-
             <h3
               className="
                                 mb-5
@@ -311,13 +285,9 @@ function Footer() {
               Get In Touch
             </h3>
 
-
-            {/* =========================
-                                    EMAILS
-                            ========================= */}
+            {/* Emails */}
 
             <div className="mb-6 flex gap-4 sm:mb-7">
-
               <span
                 className="
                                     mt-1
@@ -325,7 +295,6 @@ function Footer() {
                                     text-accent-light
                                 "
               >
-
                 {(() => {
                   const Icon = contactInfo.emails.icon;
 
@@ -336,61 +305,45 @@ function Footer() {
                     />
                   );
                 })()}
-
               </span>
-
 
               <div
                 className="
-                                    flex
-                                    flex-col
-                                    gap-2
-                                    text-sm
-                                    font-medium
-                                    text-white/70
-
-                                    sm:text-[15px]
-                                "
+    flex
+    flex-col
+    gap-2
+    text-sm
+    font-medium
+    text-(--text-muted)
+    sm:text-[15px]
+  "
               >
-
                 {contactInfo.emails.items.map((email) => (
-
                   <a
                     key={email}
                     href={`mailto:${email}`}
                     className="
-                                            transition-all
-                                            duration-300
-                                            ease-in-out
-
-                                            hover:text-accent-light
-                                            
-                                            
-                                        "
+        transition-colors
+        duration-300
+        ease-in-out
+        hover:text-(--cream-light)
+      "
                   >
                     {email}
                   </a>
-
                 ))}
-
               </div>
-
             </div>
 
-
-            {/* =========================
-                                    PHONE
-                            ========================= */}
+            {/* Phone */}
 
             <div className="mb-6 flex gap-4 sm:mb-7">
-
               <span
                 className="
                                     shrink-0
                                     text-accent-light
                                 "
               >
-
                 {(() => {
                   const Icon = contactInfo.phone.icon;
 
@@ -401,9 +354,7 @@ function Footer() {
                     />
                   );
                 })()}
-
               </span>
-
 
               <a
                 href={`tel:${contactInfo.phone.number}`}
@@ -412,28 +363,26 @@ function Footer() {
                                     font-medium
                                     text-white/70
 
+                                    transition-colors
+                                    duration-300
+                                    hover:text-accent-light
+
                                     sm:text-[15px]
                                 "
               >
                 {contactInfo.phone.number}
               </a>
-
             </div>
 
-
-            {/* =========================
-                                    LOCATION
-                            ========================= */}
+            {/* Location */}
 
             <div className="flex gap-4">
-
               <span
                 className="
                                     shrink-0
                                     text-accent-light
                                 "
               >
-
                 {(() => {
                   const Icon = contactInfo.address.icon;
 
@@ -444,9 +393,7 @@ function Footer() {
                     />
                   );
                 })()}
-
               </span>
-
 
               <p
                 className="
@@ -458,28 +405,19 @@ function Footer() {
                                     sm:text-[15px]
                                 "
               >
-
                 {contactInfo.address.text.map((line) => (
-
                   <span
                     key={line}
                     className="block"
                   >
                     {line}
                   </span>
-
                 ))}
-
               </p>
-
             </div>
-
           </div>
 
-
-          {/* =================================================
-                                            EVENT INFO
-                        ================================================= */}
+          {/* Event Info */}
 
           <div
             className="
@@ -495,7 +433,6 @@ function Footer() {
                             xl:w-[26%]
                         "
           >
-
             <h3
               className="
                                 mb-5
@@ -513,7 +450,6 @@ function Footer() {
             >
               Event Info
             </h3>
-
 
             <div
               className="
@@ -533,26 +469,18 @@ function Footer() {
                                 xl:h-63.75
                             "
             >
-
               <iframe
                 title="Nandan Kolkata Location"
                 src="https://www.google.com/maps?q=Nandan,Kolkata,West+Bengal&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"
               />
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
-
-      {/* =================================================
-                                BOTTOM FOOTER
-                ================================================= */}
+      {/* Bottom Footer */}
 
       <div
         className="
@@ -561,7 +489,6 @@ function Footer() {
                     xl:h-20
                 "
       >
-
         <div
           className="
                         mx-auto
@@ -586,47 +513,38 @@ function Footer() {
                         xl:px-0
                     "
         >
-
-          {/* =========================
-                                    LEGAL LINKS
-                            ========================= */}
-
+          {/* Legal Links */}
           <div
             className="
-                            flex
-                            flex-wrap
-                            justify-center
-                            items-center
-                            gap-x-5
-                            gap-y-2
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    gap-x-5
+    gap-y-2
 
-                            sm:gap-x-6
-                        "
+    sm:gap-x-6
+  "
           >
-
             {legalLinks.map((link) => (
-
               <a
                 key={link.label}
-                href={link.path}
+                href="#"
                 className="
-                                    text-xs
-                                    text-accent-light
-                                    transition-colors
-                                    duration-300
-
-                                    hover:text-accent-light
-
-                                    sm:text-sm
-                                "
+        text-xs
+        font-semibold
+        text-(--text-muted)
+        transition-colors
+        duration-300
+        ease-in-out
+        hover:text-(--cream-light)
+        sm:text-sm
+      "
               >
                 {link.label}
               </a>
-
             ))}
-
           </div>
-
 
           <p
             className="
@@ -642,14 +560,10 @@ function Footer() {
           >
             © CFCCF 2027 IN KOLKATA
           </p>
-
         </div>
-
       </div>
-
-    </footer>
+    </footer >
   );
 }
-
 
 export default Footer;

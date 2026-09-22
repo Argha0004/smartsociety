@@ -60,7 +60,7 @@ export const headerButtons = [
     },
     {
         label: "SIGN IN",
-        path: "/signin",
+        path: "/sign-in",
         type: "outline",
     },
 ];

@@ -66,8 +66,9 @@ function Rule() {
                     relative
                     mx-auto
                     flex
+                    items-center
                     w-full
-                    max-w-[1000px]
+                    max-w-250
                     flex-col
                     px-5
                     sm:px-8
@@ -86,7 +87,7 @@ function Rule() {
           {/* Title */}
           <h1
             className="
-                            cinzel
+                            outfit
                             mt-1
                             text-3xl
                             font-bold
@@ -94,9 +95,10 @@ function Rule() {
                             leading-tight
                             tracking-normal
                             text-accent-light
+                            [text-shadow:0_0_18px_rgba(237,217,181,0.25),0_0_36px_rgba(237,217,181,0.4)]
                             sm:text-4xl
                             md:text-5xl
-                            lg:text-6xl
+                            lg:text-7xl
                         "
           >
             {rulesData.rules.page.title}
@@ -107,12 +109,12 @@ function Rule() {
             className="
                             mx-auto
                             mt-5
-                            max-w-[720px]
+                            max-w-180
                             font-poppins
                             text-xs
                             leading-5
-                            text-accent-light/70
-                            sm:text-sm
+                            text-white/50
+                            sm:text-base
                             sm:leading-6
                         "
           >
@@ -124,52 +126,54 @@ function Rule() {
         <div className="mt-8 flex justify-center sm:mt-9">
           <div
             className="
-                            flex
-                            items-center
-                            rounded-full
-                            border
-                            border-accent-light
-                            bg-transparent
-                            p-0.5
-                        "
+      inline-flex
+      items-center
+      rounded-full
+      p-1
+      bg-[rgba(139,46,46,0.12)]
+      border
+      border-[rgba(139,46,46,0.25)]
+    "
           >
             {rulesData.rules.sections.map((section) => (
               <Button
                 key={section.id}
                 type="button"
-                onClick={() =>
-                  setActiveSection(section.id)
-                }
+                onClick={() => setActiveSection(section.id)}
                 className={`
-                                    min-w-[155px]
-                                    rounded-full
-                                    border-0
-                                    px-5
-                                    py-2.5
-                                    font-poppins
-                                    text-[10px]
-                                    font-semibold
-                                    uppercase
-                                    tracking-wide
-                                    transition-all
-                                    duration-300
-                                    sm:min-w-[175px]
-                                    sm:px-7
-                                    sm:text-xs
+          tab-btn
+          min-w-38.75
+          rounded-full!
+          border-0
+          px-5
+          py-2.5
+          outfit
+          text-xs
+          uppercase
+          tracking-wide
+          transition-all
+          duration-200
+          sm:min-w-43.75
+          sm:px-7
+          sm:text-sm
 
-                                    ${activeSection === section.id
+          ${activeSection === section.id
                     ? `
-                                                bg-primary-light
-                                                text-accent-light
-                                                shadow-none
-                                            `
+              bg-[rgba(139,46,46,0.85)]!
+              text-(--cream)
+              font-black
+              shadow-[0_0_16px_rgba(139,46,46,0.4)]
+              
+            `
                     : `
-                                                bg-transparent
-                                                text-accent-light
-                                                hover:bg-primary-light/20
-                                            `
+              bg-transparent
+              text-[rgba(245,237,224,0.55)]
+              font-semibold
+              hover:text-(--cream)
+              
+            `
                   }
-                                `}
+        `}
               >
                 {section.buttonLabel}
               </Button>
@@ -180,11 +184,16 @@ function Rule() {
         {/* Rules Content Card */}
         <div
           className="
+          flex
+          justify-center
+          items-center
+          w-full
+          md:w-245
                         mt-8
                         overflow-hidden
                         rounded-[15px]
                         border
-                        border-accent-light/70
+                        border-accent/25
                         bg-primary-dark/20
                         sm:mt-9
                     "
@@ -206,16 +215,16 @@ function Rule() {
               {/* Intro */}
               <p
                 className="
-                                    border-b
-                                    border-accent-light/40
-                                    pb-4
-                                    font-poppins
-                                    text-xs
-                                    leading-5
-                                    text-accent-light/80
-                                    sm:text-sm
-                                    sm:leading-6
-                                "
+    border-b
+    border-accent-light/10
+    pb-4
+    font-poppins
+    text-xs
+    leading-5
+    text-accent-light/80
+    sm:text-sm
+    sm:leading-6
+  "
               >
                 {currentSection.intro}
               </p>
@@ -223,7 +232,7 @@ function Rule() {
               {/* Section Heading */}
               <h2
                 className="
-                                    cinzel
+                                    outfit
                                     mt-5
                                     text-xl
                                     font-semibold
@@ -238,37 +247,32 @@ function Rule() {
 
               {/* Rules */}
               <div className="mt-3">
-                {currentSection.rules.map(
-                  (rule, index) => (
-                    <div
-                      key={index}
-                      className="
-                                                border-b
-                                                border-accent-light/20
-                                                px-1
-                                                py-3
-                                                font-poppins
-                                                text-xs
-                                                leading-5
-                                                text-accent-light/80
-                                                sm:text-sm
-                                                sm:leading-6
-                                            "
-                    >
-                      <span
-                        className="
-                                                    mr-1
-                                                    font-semibold
-                                                    text-accent-light
-                                                "
-                      >
-                        {index + 1}.
-                      </span>
-
-                      {rule}
-                    </div>
-                  )
-                )}
+                {currentSection.rules.map((rule, index) => (
+                  <div
+                    key={index}
+                    className="
+        border-b
+        border-accent-light/10
+        px-1
+        py-3
+        font-poppins
+        text-xs
+        leading-5
+        text-accent-light/80
+        transition-transform
+        duration-200
+        ease-out
+        hover:translate-x-1.5
+        sm:text-sm
+        sm:leading-6
+      "
+                  >
+                    <span className="mr-1 font-semibold text-accent-light">
+                      {index + 1}.
+                    </span>
+                    {rule}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -278,7 +282,7 @@ function Rule() {
                                 w-full
                                 rounded-xl
                                 border
-                                border-accent-light/40
+                                border-accent-light/20
                                 bg-primary-dark/20
                                 p-4
                                 sm:p-5
@@ -305,7 +309,7 @@ function Rule() {
                                     mt-5
                                     rounded-xl
                                     border
-                                    border-accent-light/60
+                                    border-accent-light/25
                                     bg-primary-light/20
                                     p-4
                                 "
@@ -328,7 +332,7 @@ function Rule() {
 
                 <p
                   className="
-                                        cinzel
+                                        outfit
                                         mt-2
                                         text-sm
                                         font-semibold
@@ -348,7 +352,7 @@ function Rule() {
                                     mt-3
                                     rounded-xl
                                     border
-                                    border-accent-light/40
+                                    border-accent-light/20
                                     bg-transparent
                                     p-4
                                 "
@@ -371,7 +375,7 @@ function Rule() {
 
                 <p
                   className="
-                                        cinzel
+                                        outfit
                                         mt-2
                                         text-sm
                                         font-semibold
@@ -408,7 +412,7 @@ function Rule() {
                       .registerButton.path
                   )
                 }
-                className="
+                className="         outfit
                                     mt-4
                                     w-full
                                     rounded-xl
@@ -418,6 +422,8 @@ function Rule() {
                                     py-3
                                     font-poppins
                                     text-xs
+                                    sm:sm
+                                    md:text-base
                                     font-semibold
                                     uppercase
                                     tracking-wide

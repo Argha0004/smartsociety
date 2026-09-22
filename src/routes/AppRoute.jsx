@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
 import MainLayout from "../layouts/MainLayouts";
 
 // Pages
@@ -12,6 +10,8 @@ import ContactUs from "../pages/ContactUs";
 
 // Auth Pages
 import Register from "../pages/auth/Register";
+import SignIn from "../pages/auth/SignIn";
+import SignUp from "../pages/auth/SignUp";
 
 
 function AppRoute() {
@@ -53,9 +53,23 @@ function AppRoute() {
 
                     
                     {/* Auth */}
+
+                    {/* Register */}
                     <Route
                         path="/register"
                         element={<Register />}
+                    />
+                    
+                    {/* Sign In */}
+                    <Route
+                        path="/sign-in"
+                        element={<SignIn />}
+                    />
+
+                    {/* Sign Up */}
+                    <Route
+                        path="/sign-up"
+                        element={<SignUp />}
                     />
                 </Route>
 

@@ -222,7 +222,8 @@ function About() {
               <div
                 className="
                                     group
-                                    w-150
+                                    w-full
+                                    md:w-150
                                     rounded-2xl
                                     border
                                     border-[rgba(237,217,181,0.15)]

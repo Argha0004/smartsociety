@@ -1,16 +1,99 @@
 {
+  "home": {
+    "hero": {
+      "badge": "CFCCF · KOLKATA CHAPTER · 2027",
+
+      "title": ["CONSORTIUM OF FILM", "& CONTENT CREATORS", "FESTIVAL"],
+
+      "subtitle": "KOLKATA CHAPTER",
+
+      "description": "In today's interconnected world, storytelling is a bridge that unites diverse cultures. The Kolkata Film, Content Creators Festival & Award Ceremony 2027 celebrates the power of visual narratives — honoring the art of filmmaking and digital content creation, inspiring innovation in the creative industry.",
+
+      "event": {
+        "label": "EVENT",
+        "date": "9th January, 2027 · Kolkata",
+        "venue": "Venue: Nandan, Kolkata",
+        "calendarText": "CLICK TO VIEW CALENDAR"
+      },
+
+      "countdown": {
+        "days": {
+          "label": "DAYS",
+          "value": "108"
+        },
+        "hours": {
+          "label": "HOURS",
+          "value": "07"
+        },
+        "minutes": {
+          "label": "MINS",
+          "value": "46"
+        },
+        "seconds": {
+          "label": "SECS",
+          "value": "03"
+        }
+      },
+
+      "actions": [
+        {
+          "label": "REGISTER NOW",
+          "path": "/register",
+          "type": "primary"
+        },
+        {
+          "label": "VISITORS PASS",
+          "path": "/visitors-pass",
+          "type": "outline"
+        }
+      ],
+
+      "previousEditions": {
+        "label": "PREVIOUS EDITIONS",
+        "path": "/previous-editions"
+      },
+
+      "background": {
+        "src": "https://cfccf.smartsociety.org/assets/kolkata-CY7Y1D0o.png",
+        "alt": "Kolkata cultural illustration",
+        "opacity": 0.6
+      },
+
+      "teaser": {
+        "label": "TEASER",
+        "year": "2027",
+        "playLabel": "PLAY"
+      }
+    }
+  },
+
   "rules": {
     "page": {
       "badge": "CFCCF 2027 · KOLKATA, INDIA",
       "title": "RULES & REGULATIONS",
       "description": "Organised by IEM-UEM Group, SMART Society (USA), Bengal Heritage Foundation & Forum for Film Studies and Allied Arts"
     },
+
     "sections": [
       {
         "id": "general",
         "buttonLabel": "GENERAL RULES",
         "heading": "A. GENERAL RULES",
-        "intro": "The following rules apply to all films submitted to the festival.",
+        "intro": "CFCCF 2027 is a competitive short film festival aimed at promoting excellence in motion picture art and encouraging meaningful film culture worldwide, now returning to the cultural heartland of Kolkata.",
+        "rules": [
+          "Films entered in the competitive section will be considered for the respective festival awards.",
+          "The selection committee will determine the films eligible for competition.",
+          "A film may be entered into only the category applicable to its format and subject.",
+          "The jury's decision regarding awards shall be final and binding.",
+          "The festival organisers reserve the right to withdraw an award in case of violation of festival regulations.",
+          "Awards and certificates will be presented according to the final jury decisions."
+        ]
+      },
+      {
+        "id": "competitive",
+        "buttonLabel": "COMPETITIVE SECTION",
+        "heading": "B. COMPETITIVE SECTION",
+        "intro": "CFCCF 2027 is a competitive short film festival aimed at promoting excellence in motion picture art and encouraging meaningful film culture worldwide, now returning to the cultural heartland of Kolkata.",
         "rules": [
           "The festival is open to filmmakers from India and abroad.",
           "Films must be submitted in accordance with the prescribed submission guidelines.",
@@ -21,22 +104,9 @@
           "Selected films may be screened during the festival and used for festival-related promotional activities.",
           "Submission of a film implies acceptance of all festival rules and regulations."
         ]
-      },
-      {
-        "id": "competitive",
-        "buttonLabel": "COMPETITIVE SECTION",
-        "heading": "B. COMPETITIVE SECTION",
-        "intro": "Films entered into the competitive section must comply with the following requirements.",
-        "rules": [
-          "Films entered in the competitive section will be considered for the respective festival awards.",
-          "The selection committee will determine the films eligible for competition.",
-          "A film may be entered into only the category applicable to its format and subject.",
-          "The jury's decision regarding awards shall be final and binding.",
-          "The festival organisers reserve the right to withdraw an award in case of violation of festival regulations.",
-          "Awards and certificates will be presented according to the final jury decisions."
-        ]
       }
     ],
+
     "keyDates": {
       "submissionDeadline": {
         "label": "SUBMISSION DEADLINE",
@@ -53,12 +123,14 @@
       }
     }
   },
+
   "about": {
     "page": {
       "badge": "OUR PARTNERS",
       "title": "ABOUT US",
       "description": "A collaboration between Bengal Heritage Foundation, The Forum for Film Studies & Allied Arts, and SMART Society — united by the love of cinema."
     },
+
     "partners": [
       {
         "id": "forum-for-film-studies",
