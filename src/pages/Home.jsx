@@ -1,16 +1,200 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ChevronDown, Play } from "lucide-react";
+import { Play, X } from "lucide-react";
 import photo10 from "../assets/photo-10.png";
 import photo5 from "../assets/photo-5.jpg";
 import FestivalBadge from "../components/FestivalBadge";
+import EventLineUp from "../components/EventLineUp";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 import homeData from "../data/data.json";
 
+
+function EventCalendar({
+  year,
+  month,
+  highlightDay,
+  onClose,
+}) {
+  const monthName = new Date(year, month).toLocaleString("default", {
+    month: "long",
+  });
+
+  const firstDayIndex = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const cells = [
+    ...Array(firstDayIndex).fill(null),
+    ...Array.from(
+      { length: daysInMonth },
+      (_, index) => index + 1
+    ),
+  ];
+
+  const weekdays = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ];
+
+  return (
+    <div
+      className="
+        fixed
+        inset-0
+        z-50
+        flex
+        items-center
+        justify-center
+        bg-black/75
+        p-4
+        sm:p-6
+      "
+      onClick={onClose}
+    >
+      <div
+        className="
+          relative
+          w-full
+          max-w-72
+          rounded-xl
+          border
+          border-primary-light
+          bg-dark1
+          p-5
+          shadow-2xl
+          backdrop-blur-md
+          sm:max-w-80
+        "
+        onClick={(event) => event.stopPropagation()}
+      >
+        {/* Calendar header */}
+
+        <div className="mb-4 flex items-center justify-between">
+          <h3
+            className="
+              cinzel
+              text-sm
+              font-bold
+              uppercase
+              tracking-widest
+              text-accent
+            "
+          >
+            {monthName} {year}
+          </h3>
+
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close calendar"
+            className="
+              flex
+              h-7
+              w-7
+              items-center
+              justify-center
+              rounded-md
+              text-accent1
+              transition-colors
+              hover:bg-accent/10
+              hover:text-accent
+            "
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+
+        {/* Weekdays */}
+
+        <div className="mb-2 flex w-full flex-wrap">
+          {weekdays.map((day) => (
+            <div
+              key={day}
+              className="
+                flex
+                w-[14.2857%]
+                items-center
+                justify-center
+                text-center
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-wider
+                text-accent1
+              "
+            >
+              {day}
+            </div>
+          ))}
+        </div>
+
+        {/* Calendar dates */}
+
+        <div className="flex w-full flex-wrap">
+          {cells.map((day, index) => {
+            if (day === null) {
+              return (
+                <div
+                  key={`empty-${index}`}
+                  className="aspect-square w-[14.2857%]"
+                />
+              );
+            }
+
+            const isHighlighted = day === highlightDay;
+
+            return (
+              <div
+                key={day}
+                className="
+                  flex
+                  aspect-square
+                  w-[14.2857%]
+                  items-center
+                  justify-center
+                  p-0.5
+                "
+              >
+                <button
+                  type="button"
+                  className={`
+                    flex
+                    h-full
+                    w-full
+                    items-center
+                    justify-center
+                    rounded-md
+                    text-xs
+                    font-medium
+                    transition-colors
+                    bg-[#ffffff0a]
+                    ${isHighlighted
+                      ? "bg-primary-light text-accent-light shadow-[0_14px_30px_-3px_var(--glow-brick)]"
+                      : "text-accent-light/80 hover:bg-accent/10 hover:text-accent"
+                    }
+                  `}
+                >
+                  {day}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Home() {
   const navigate = useNavigate();
+  const [showCalendar, setShowCalendar] = useState(false);
 
-  const { hero, reel } = homeData.home;
+  const { hero, reel, eventLineup } = homeData.home;
 
   const calculateTimeLeft = () => {
     const festivalDate = new Date("2027-01-09T00:00:00");
@@ -433,93 +617,130 @@ function Home() {
               {/* Event + countdown + actions */}
 
               <div className="mt-7 flex flex-col items-start gap-5">
-                {/* Event card */}
+                {/* Event date */}
 
-                <div
-                  className="
-          rounded-xl
-          border
-          border-accent-light/20
-          bg-primary-dark/40
-          px-5
-          py-4
-        "
-                >
-                  <p
-                    className="
-            text-[10px]
-            font-semibold
-            uppercase
-            tracking-[0.2em]
-            text-accent-light/70
-          "
-                  >
-                    {hero.event.label}
-                  </p>
-
-                  <p
-                    className="
-            cinzel
-            mt-1
-            text-base
-            font-semibold
-            text-accent-light
-          "
-                  >
-                    {hero.event.date}
-                  </p>
-
-                  <p className="mt-0.5 text-xs text-accent-light/60">
-                    {hero.event.venue}
-                  </p>
-
+                <div className="relative">
                   <button
                     type="button"
+                    onClick={() => setShowCalendar((prev) => !prev)}
                     className="
-            mt-2
-            text-[10px]
-            font-semibold
-            uppercase
-            tracking-wide
-            text-accent-light/70
-            underline-offset-2
-            hover:underline
-          "
+                      group
+                      relative
+                      rounded-xl
+                      border
+                      border-accent/30
+                      bg-accent/8
+                      px-6
+                      py-4
+                      text-left
+                      backdrop-blur-md
+                      transition-all
+                      duration-300
+                      hover:-translate-y-0.5
+                    "
                   >
-                    {hero.event.calendarText}
+                    <div
+                      className="
+                        mb-1
+                        text-[10px]
+                        font-extrabold
+                        uppercase
+                        tracking-[0.22em]
+                        text-accent/40
+                      "
+                    >
+                      {hero.event.label}
+                    </div>
+
+                    <div
+                      className="
+                        cinzel
+                        text-lg
+                        font-black
+                        tracking-tight
+                        text-accent
+                        [text-shadow:0_0_12px_rgba(237,217,181,0.4)]
+                        md:text-xl
+                      "
+                    >
+                      {hero.event.date}
+                    </div>
+
+                    <div className="mt-1 text-[13px] font-semibold text-accent-light/75">
+                      {hero.event.venue}
+                    </div>
+
+                    <div
+                      className="
+                        mt-1
+                        flex
+                        items-center
+                        gap-1
+                        text-[11px]
+                        uppercase
+                        tracking-wider
+                        text-accent/50
+                      "
+                    >
+                      {hero.event.calendarText}
+                      <TiArrowSortedDown className="h-3 w-3" />
+                    </div>
                   </button>
                 </div>
 
+                {showCalendar && (
+                  <EventCalendar
+                    year={2027}
+                    month={0}
+                    highlightDay={9}
+                    onClose={() => setShowCalendar(false)}
+                  />
+                )}
+
                 {/* Countdown */}
 
-                <div className="flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-wrap gap-3">
                   {countdownItems.map((item) => (
                     <div
                       key={item.label}
                       className="
-              flex
-              h-16
-              w-16
-              flex-col
-              items-center
-              justify-center
-              rounded-lg
-              border
-              border-accent-light/30
-              bg-primary-dark/50
-            "
+        flex
+        min-w-17
+        flex-col
+        items-center
+        justify-center
+        rounded-xl
+        border
+        border-primary-light/35
+        bg-primary-light/15
+        px-4
+        py-3
+        backdrop-blur
+      "
                     >
-                      <span className="cinzel text-lg font-bold text-accent-light">
+                      <span
+                        className="
+          cinzel
+          font-black
+          leading-none
+          tabular-nums
+          text-accent
+          [text-shadow:0_0_18px_rgba(237,217,181,0.6)]
+          text-[clamp(1.6rem,4vw,2.4rem)]
+        "
+                      >
                         {item.value}
                       </span>
 
                       <span
                         className="
-                text-[9px]
-                uppercase
-                tracking-widest
-                text-accent-light/60
-              "
+          mt-1
+          text-[10px]
+          md:text-[11px]
+          uppercase
+          tracking-[0.18em]
+          text-accent1
+        "
                       >
                         {item.label}
                       </span>
@@ -625,7 +846,7 @@ function Home() {
 
                 <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-black/50" />
 
-                <div className="absolute inset-0 flex items-center justify-center place-items-center px-4">
+                <div className="absolute inset-0 flex items-center justify-center px-4">
                   <div className="flex select-none flex-col items-center gap-6">
 
                     {/* Teaser / 2027 */}
@@ -828,6 +1049,16 @@ function Home() {
       "
           />
         </div>
+      </div>
+
+      {/* Event lineup */}
+
+      <div className="relative z-20 w-full bg-[#1C0A0A] px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-10">
+        <EventLineUp
+          title={eventLineup.title}
+          subtitle={eventLineup.subtitle}
+          events={eventLineup.events}
+        />
       </div>
     </section>
   );

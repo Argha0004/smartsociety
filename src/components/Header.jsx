@@ -207,35 +207,78 @@ function Header() {
               "
             >
 
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.label}
-                  to={link.path}
-                  end={link.path === "/"}
-                  className={({ isActive }) =>
-                    `
-                      group
-                      relative
-                      py-1
-                      text-sm
-                      font-medium
-                      tracking-wide
-                      text-(--text-muted)
-                      transition-colors
-                      duration-300
-                      ease-in-out
-
-                      hover:text-accent-light
-
-                      xl:text-base
-                    `
-                  }
-                >
-                  <>
+              {navLinks.map((link) =>
+                link.path.startsWith("#") ? (
+                  <a
+                    key={link.label}
+                    href={link.path}
+                    className="
+                group
+                relative
+                py-1
+                text-sm
+                font-medium
+                tracking-wide
+                transition-all
+                duration-300
+                ease-in-out
+                text-primary1
+                hover:-translate-y-0.5
+                hover:text-primary2
+                xl:text-base
+            "
+                  >
                     {link.label}
 
                     <span
                       className="
+                    pointer-events-none
+                    absolute
+                    -bottom-1
+                    left-0
+                    h-px
+                    w-0
+                    rounded
+                    bg-[linear-gradient(90deg,var(--cream),var(--brick-light))]
+                    shadow-[0_0_8px_rgba(237,217,181,0.5)]
+                    transition-[width]
+                    duration-300
+                    ease-out
+                    group-hover:w-full
+                "
+                    />
+                  </a>
+                ) : (
+                  <NavLink
+                    key={link.label}
+                    to={link.path}
+                    end={link.path === "/"}
+                    className={({ isActive }) =>
+                      `
+                group
+                relative
+                py-1
+                text-sm
+                font-medium
+                tracking-wide
+                transition-all
+                duration-300
+                ease-in-out
+                xl:text-base
+                ${isActive
+                        ? "text-primary2"
+                        : "text-primary1"
+                      }
+                hover:-translate-y-0.5
+                hover:text-primary2
+                `
+                    }
+                  >
+                    <>
+                      {link.label}
+
+                      <span
+                        className="
                         pointer-events-none
                         absolute
                         -bottom-1
@@ -248,14 +291,13 @@ function Header() {
                         transition-[width]
                         duration-300
                         ease-out
-
                         group-hover:w-full
-                      "
-                    />
-                  </>
-                </NavLink>
-              ))}
-
+                    "
+                      />
+                    </>
+                  </NavLink>
+                )
+              )}
               {/* Header Buttons */}
 
               {headerButtons.map((button) => (
@@ -375,41 +417,61 @@ function Header() {
 
               {/* Mobile Nav Links */}
 
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.label}
-                  to={link.path}
-                  end={link.path === "/"}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `
-                      rounded-md
-                      px-4
-                      py-2.5
-                      text-sm
-                      font-medium
-                      tracking-wide
-                      transition-all
-                      duration-300
-                      ease-in-out
-
-                      ${isActive
-                      ? `
-                            bg-purple
-                            text-accent-light
-                          `
-                      : `
-                            text-(--text-muted)
-                            hover:bg-purple
-                            hover:text-accent-light
-                          `
+              {navLinks.map((link) =>
+                link.path.startsWith("#") ? (
+                  <a
+                    key={link.label}
+                    href={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="
+                rounded-md
+                px-4
+                py-2.5
+                text-sm
+                font-medium
+                tracking-wide
+                text-primary1
+                transition-all
+                duration-300
+                ease-in-out
+                hover:-translate-y-0.5
+                hover:bg-purple
+                hover:text-primary2
+            "
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={link.label}
+                    to={link.path}
+                    end={link.path === "/"}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={({ isActive }) =>
+                      `
+                rounded-md
+                px-4
+                py-2.5
+                text-sm
+                font-medium
+                tracking-wide
+                transition-all
+                duration-300
+                ease-in-out
+                ${isActive
+                        ? "bg-purple text-accent-light"
+                        : "text-primary1"
+                      }
+                
+                hover:bg-purple
+                hover:text-primary2
+                `
                     }
-                    `
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+                  >
+                    {link.label}
+                  </NavLink>
+                )
+              )}
 
               {/* Mobile Buttons */}
 

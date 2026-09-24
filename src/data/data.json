@@ -2,20 +2,15 @@
   "home": {
     "hero": {
       "badge": "CFCCF · KOLKATA CHAPTER · 2027",
-
       "title": ["CONSORTIUM OF FILM", "& CONTENT CREATORS", "FESTIVAL"],
-
       "subtitle": "KOLKATA CHAPTER",
-
       "description": "In today's interconnected world, storytelling is a bridge that unites diverse cultures. The Kolkata Film, Content Creators Festival & Award Ceremony 2027 celebrates the power of visual narratives — honoring the art of filmmaking and digital content creation, inspiring innovation in the creative industry.",
-
       "event": {
         "label": "EVENT",
         "date": "9th January, 2027 · Kolkata",
         "venue": "Venue: Nandan, Kolkata",
         "calendarText": "CLICK TO VIEW CALENDAR"
       },
-
       "countdown": {
         "days": {
           "label": "DAYS",
@@ -34,7 +29,6 @@
           "value": "03"
         }
       },
-
       "actions": [
         {
           "label": "REGISTER NOW",
@@ -47,18 +41,15 @@
           "type": "outline"
         }
       ],
-
       "previousEditions": {
         "label": "PREVIOUS EDITIONS",
         "path": "/previous-editions"
       },
-
       "background": {
         "src": "https://cfccf.smartsociety.org/assets/kolkata-CY7Y1D0o.png",
         "alt": "Kolkata cultural illustration",
         "opacity": 0.6
       },
-
       "teaser": {
         "label": "TEASER",
         "year": "2027",
@@ -123,16 +114,48 @@
           "alt": "CFCCF Kolkata artwork"
         }
       ]
+    },
+    "eventLineup": {
+      "title": "EVENT LINEUP",
+      "subtitle": "9TH JANUARY 2027 · KOLKATA, INDIA",
+      "events": [
+        {
+          "id": "screening-1",
+          "category": "SCREENING",
+          "title": "Coming soon...",
+          "meta": "Coming soon... · Coming soon... · Coming soon...",
+          "details": "Coming soon..."
+        },
+        {
+          "id": "workshop-1",
+          "category": "WORKSHOP",
+          "title": "Coming soon...",
+          "meta": "Coming soon... · Coming soon... · Coming soon...",
+          "details": "Coming soon..."
+        },
+        {
+          "id": "panel-1",
+          "category": "PANEL",
+          "title": "Coming soon...",
+          "meta": "Coming soon... · Coming soon... · Coming soon...",
+          "details": "Coming soon..."
+        },
+        {
+          "id": "screening-2",
+          "category": "SCREENING",
+          "title": "Coming soon...",
+          "meta": "Coming soon... · Coming soon... · Coming soon...",
+          "details": "Coming soon..."
+        }
+      ]
     }
   },
-
   "rules": {
     "page": {
       "badge": "CFCCF 2027 · KOLKATA, INDIA",
       "title": "RULES & REGULATIONS",
       "description": "Organised by IEM-UEM Group, SMART Society (USA), Bengal Heritage Foundation & Forum for Film Studies and Allied Arts"
     },
-
     "sections": [
       {
         "id": "general",
@@ -165,7 +188,6 @@
         ]
       }
     ],
-
     "keyDates": {
       "submissionDeadline": {
         "label": "SUBMISSION DEADLINE",
@@ -182,14 +204,12 @@
       }
     }
   },
-
   "about": {
     "page": {
       "badge": "OUR PARTNERS",
       "title": "ABOUT US",
       "description": "A collaboration between Bengal Heritage Foundation, The Forum for Film Studies & Allied Arts, and SMART Society — united by the love of cinema."
     },
-
     "partners": [
       {
         "id": "forum-for-film-studies",

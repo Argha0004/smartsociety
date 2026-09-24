@@ -6,7 +6,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Rules from "../pages/Rule";
 import Jury from "../pages/Jury";
-import ContactUs from "../pages/ContactUs";
+// import ContactUs from "../pages/ContactUs";
 
 // Auth Pages
 import Register from "../pages/auth/Register";
@@ -46,10 +46,10 @@ function AppRoute() {
                     />
 
                     {/* Contact-Us */}
-                    <Route
+                    {/* <Route
                         path="/contact-us"
                         element={<ContactUs />}
-                    />
+                    /> */}
 
                     
                     {/* Auth */}

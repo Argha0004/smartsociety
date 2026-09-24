@@ -10,6 +10,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 function Footer() {
   return (
     <footer
+    id="footer"
       className="
                 footer
                 w-full
