@@ -22,6 +22,11 @@
     --glass-border: rgba(237, 217, 181, 0.15);
 }
 
+/*New Insertion*/
+/* Registers the palette with Tailwind's theme layer so bg-*/
+
+/*End New Insertion*/
+
 /*----------------------------------------------------------------FONTS----------------------------------------------------------------*/
 
 .poppins {
@@ -44,6 +49,17 @@
     font-family: "Outfit", cursive;
 }
 
+/*New Insertion*/
+/* About.jsx and Rule.jsx both use `font-poppins` in their className strings,
+   but only `.poppins` existed — `font-poppins` was never a real class, so
+   it silently did nothing everywhere it was used. This alias fixes that
+   without touching the original `.poppins` class or renaming anything. */
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+/*End New Insertion*/
+
 
 /*--------------------------------------------------------BACKGROUNDS--------------------------------------------------------*/
 
@@ -61,7 +77,21 @@
     background-color: #462A2A;
 }
 
+.bg-dark1 {
+    background-color: #0A0C1C;
+}
 
+.bg-dark2 {
+    background-color: #000000bf;
+}
+
+.bg-dark3 {
+    background-color: #8b2e2e26;
+}
+
+.bg-dark4 {
+    background-color: #edd9b51a;
+}
 
 .bg-primary-light {
     background-color: #8B2E2E;
@@ -130,6 +160,14 @@
     color: #F5EDE0;
 }
 
+.text-primary1 {
+    color: #f7ede0bf;
+}
+
+.text-primary2 {
+    color: #edd9b5;
+}
+
 .text-primary-dark {
     color: #C9B48A;
 }
@@ -138,24 +176,14 @@
     color: #A83535;
 }
 
-/* Secondary / Blue */
-
-.text-secondary {
-    color: #3071AD;
-}
-
-.text-secondary-dark {
-    color: #32455F;
-}
-
-.text-secondary-light {
-    color: #79AED5;
-}
-
 /* Accent / Warm */
 
 .text-accent {
-    color: #EDD9B5;
+    color: #EDD9B4;
+}
+
+.text-accent1 {
+    color: #edd9b566;
 }
 
 .text-accent-light {
@@ -353,6 +381,7 @@
             #EDD9B5 100%);
 }
 
+
 /*--------------------------------------------------------ANIMATIONS--------------------------------------------------------*/
 
 @keyframes testimonial-slide-left {
@@ -389,6 +418,33 @@
     }
 }
 
+@keyframes floatUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 /*--------------------------------------------------------FOOTER--------------------------------------------------------*/
 
 .footer {
@@ -414,7 +470,6 @@
     opacity: 0.6;
 }
 
-
 /* Bottom divider */
 
 .footer-divider {
@@ -422,7 +477,12 @@
     opacity: 0.35;
 }
 
+
 /*--------------------------------------------------------HEADER--------------------------------------------------------*/
+
+.animate-header-marquee {
+    animation: header-marquee 25s linear infinite;
+}
 
 @keyframes header-marquee {
     from {
@@ -434,33 +494,14 @@
     }
 }
 
-.animate-header-marquee {
-    animation: header-marquee 25s linear infinite;
-}
-
-
-/* Home page Right Container */
-
-@keyframes floatUp {
-
-    0%,
-    100% {
-        transform: translateY(0);
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
     }
 
-    50% {
-        transform: translateY(-14px);
-    }
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
