@@ -64,6 +64,65 @@
         "year": "2027",
         "playLabel": "PLAY"
       }
+    },
+    "reel": {
+      "images": [
+        {
+          "id": "photo-1",
+          "src": "/assets/photo-1.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-2",
+          "src": "/assets/photo-2.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-3",
+          "src": "/assets/photo-3.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-4",
+          "src": "/assets/photo-4.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-1",
+          "src": "/assets/photo-1.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-5",
+          "src": "/assets/photo-5.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-1",
+          "src": "/assets/photo-1.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-6",
+          "src": "/assets/photo-6.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-7",
+          "src": "/assets/photo-7.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-8",
+          "src": "/assets/photo-8.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        },
+        {
+          "id": "photo-9",
+          "src": "/assets/photo-9.jpg",
+          "alt": "CFCCF Kolkata artwork"
+        }
+      ]
     }
   },
 

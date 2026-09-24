@@ -44,7 +44,7 @@ function Header() {
                   flex
                   shrink-0
                   items-center
-                  gap-2
+                  gap-2 
                   whitespace-nowrap
                   text-base
                   font-semibold
@@ -216,7 +216,7 @@ function Header() {
                     `
                       group
                       relative
-                      py-2
+                      py-1
                       text-sm
                       font-medium
                       tracking-wide
@@ -263,34 +263,40 @@ function Header() {
                   key={button.label}
                   to={button.path}
                   className={`
-                    rounded-lg
-                    border
-                    px-5
-                    py-2.5
-                    text-sm
-                    font-semibold
-                    tracking-wide
-                    transition-all
-                    duration-300
-                    ease-in-out
+      oswald              
+      rounded-lg
+      border
+      px-5
+      py-2.5
+      text-sm
+      font-semibold
+      tracking-wide
+      
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      ease-in-out
+      hover:-translate-y-0.5
+      hover:shadow-[0_14px_30px_-3px_var(--glow-brick)]
+      bg-secondery-dark
 
-                    ${button.type === "primary"
+      ${button.type === "primary"
                       ? `
-                          border-primary-light
-                          bg-primary-light
-                          text-accent-light
-                          hover:bg-primary
-                          hover:border-primary
-                        `
+            border-[rgba(237,217,181,0.18)]
+            bg-primary-light
+            text-accent-light
+            hover:bg-primary
+            hover:border-primary
+          `
                       : `
-                          border-accent/50
-                          bg-transparent
-                          text-accent-light
-                          hover:border-accent
-                          hover:bg-primary
-                        `
+            border-accent/50
+            bg-transparent
+            text-accent-light
+            hover:border-accent
+            hover:bg-primary
+          `
                     }
-                  `}
+    `}
                 >
                   {button.label}
                 </Link>
