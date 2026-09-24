@@ -54,8 +54,14 @@
 }
 
 .bg-primary-dark {
-    background-color: #1C0A0A;
+    background-color: #381a1a;
 }
+
+.bg-secondery-dark {
+    background-color: #462A2A;
+}
+
+
 
 .bg-primary-light {
     background-color: #8B2E2E;
@@ -430,4 +436,31 @@
 
 .animate-header-marquee {
     animation: header-marquee 25s linear infinite;
+}
+
+
+/* Home page Right Container */
+
+@keyframes floatUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
