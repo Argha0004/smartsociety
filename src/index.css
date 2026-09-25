@@ -93,6 +93,10 @@
     background-color: #edd9b51a;
 }
 
+.bg-dark5 {
+    background-color: #120808de;
+}
+
 .bg-primary-light {
     background-color: #8B2E2E;
 }
@@ -131,6 +135,10 @@
     background-color: #97524F;
 }
 
+.bg-rose-dark1 {
+    background-color: #8b2e2e33;
+}
+
 .bg-beige {
     background-color: #E5C8AF;
 }
@@ -147,8 +155,20 @@
     background-color: #F3F3F3;
 }
 
+.bg-gray1 {
+    background-color: #ffffff0a;
+}
+
 .bg-white {
     background-color: #FFFFFF;
+}
+
+.bg-orange {
+    background-color: #dc961e14;
+}
+
+.bg-blue {
+    background-color: #4285f426;
 }
 
 
@@ -204,6 +224,14 @@
     color: #E5C8AF;
 }
 
+.text-orange {
+    color: #f0c864d9;
+}
+
+.text-blue {
+    color: #93c4ffe6;
+}
+
 .text-purple {
     color: #4D3C58;
 }
@@ -235,8 +263,16 @@
     border-color: #5C1C1C;
 }
 
+.border-primary-dark1 {
+    border-color: #8b2e2e80;
+}
+
 .border-primary-light {
-    border-color: rgba(237, 217, 181, 0.15);
+    border-color: #edd9b526;
+}
+
+.border-primary-light1 {
+    border-color: #edd9b559;
 }
 
 .border-secondary {
@@ -247,8 +283,16 @@
     border-color: #32455F;
 }
 
+.border-secondary-dark1 {
+    border-color: #edd9b51a;
+}
+
 .border-secondary-light {
     border-color: #79AED5;
+}
+
+.border-secondary-dark {
+    border-color: #4285f466;
 }
 
 .border-accent {
@@ -261,6 +305,18 @@
 
 .border-beige {
     border-color: #C9B48A;
+}
+
+.border-dark1 {
+    border-color: #edd9b51f;
+}
+
+.border-dark2 {
+    border-color: #edd9b540;
+}
+
+.border-orange {
+    border-color: #dc961e4d;
 }
 
 .border-rose {
@@ -369,6 +425,12 @@
             #1C0A0A 100%);
 }
 
+.bg-brand-gradient1 {
+    background: linear-gradient(180deg,
+            #1c0a0a 0%,
+            #120808 100%);
+}
+
 .bg-blue-gradient {
     background: linear-gradient(135deg,
             #3071AD 0%,
@@ -448,17 +510,13 @@
 /*--------------------------------------------------------FOOTER--------------------------------------------------------*/
 
 .footer {
-    position: relative;
+    @apply relative;
 }
 
 /* Top decorative line */
 
 .footer-top-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
+    @apply absolute top-0 left-0 right-0 h-px opacity-60;
 
     background: linear-gradient(90deg,
             transparent 0%,
@@ -466,14 +524,13 @@
             #EFD8B7 50%,
             #7A352F 80%,
             transparent 100%);
-
-    opacity: 0.6;
 }
 
 /* Bottom divider */
 
 .footer-divider {
-    border-top: 1px solid #7A352F;
+    @apply border-t;
+    border-top-color: #7A352F;
     opacity: 0.35;
 }
 

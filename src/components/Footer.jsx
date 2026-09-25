@@ -14,7 +14,7 @@ function Footer() {
       className="
                 footer
                 w-full
-                bg-primary-dark
+                bg-brand-gradient1
                 text-white
 
                 lg:h-131.25
@@ -485,7 +485,8 @@ function Footer() {
 
       <div
         className="
-                    footer-divider
+                    border-t
+                    border-secondary-dark1
                     lg:h-20
                     xl:h-20
                 "

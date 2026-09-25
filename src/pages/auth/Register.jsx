@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { TriangleAlert, CreditCard } from "lucide-react";
+import { TriangleAlert } from "lucide-react";
+import { GoCreditCard } from "react-icons/go";
 
 import {
     InputField,
@@ -10,7 +11,6 @@ import {
 
 
 function Register() {
-
     const [formData, setFormData] = useState({
         filmmakerName: "",
         projectTitle: "",
@@ -26,7 +26,6 @@ function Register() {
         transactionUtr: "",
     });
 
-
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -36,31 +35,44 @@ function Register() {
         }));
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
         console.log(formData);
     };
 
+    const inputClassName = `
+        border-[rgba(237,217,181,0.15)]
+        bg-[rgba(255,255,255,0.03)]
+        text-accent-light
+    `;
+
+    const durationInputClassName = `
+        w-full
+        text-center
+        border-[rgba(237,217,181,0.15)]
+        bg-[rgba(255,255,255,0.03)]
+        text-accent-light
+        placeholder:text-white/40
+    `;
 
     return (
-        <main className="min-h-screen bg-primary-dark">
+        <main className="min-h-screen bg-brand-gradient">
 
             <section
                 className="
-    w-full
-    bg-linear-to-b
-    from-primary-light
-    via-primary
-    to-primary-dark
-    px-4
-    py-16
-    sm:px-6
-    sm:py-20
-    md:px-8
-    lg:py-20
-"
+                    w-full
+                    bg-linear-to-b
+                    from-primary-light
+                    via-primary
+                    to-primary-dark
+                    px-4
+                    py-16
+                    sm:px-6
+                    sm:py-20
+                    md:px-8
+                    lg:py-20
+                "
             >
 
                 <div
@@ -78,46 +90,48 @@ function Register() {
 
                     <div
                         className="
-        mb-8
-        rounded-full
-        border
-        border-primary-light
-        bg-primary-light/20
-        px-5
-        py-2
-        text-[10px]
-        font-semibold
-        uppercase
-        tracking-[0.2em]
-        text-accent-light
-        sm:text-xs
-    "
+                            mb-8
+                            rounded-full
+                            border
+                            border-primary-light
+                            bg-primary-light/20
+                            px-5
+                            py-2
+                            text-[10px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.2em]
+                            text-accent-light
+                            sm:text-xs
+                        "
                     >
                         <span className="relative mr-2 inline-flex size-2.5">
 
                             {/* Animated outer light */}
+
                             <span
                                 className="
-                absolute
-                inline-flex
-                h-full
-                w-full
-                animate-ping
-                rounded-full
-                bg-primary-light
-                opacity-75
-            "
+                                    absolute
+                                    inline-flex
+                                    h-full
+                                    w-full
+                                    animate-ping
+                                    rounded-full
+                                    bg-primary-light
+                                    opacity-75
+                                "
                             />
 
                             {/* Static center light */}
+
                             <span
                                 className="
-                relative
-                inline-flex
-                size-2.5
-                rounded-full
-                bg-primary-light
-            "
+                                    relative
+                                    inline-flex
+                                    size-2.5
+                                    rounded-full
+                                    bg-primary-light
+                                "
                             />
 
                         </span>
@@ -130,17 +144,17 @@ function Register() {
 
                     <h1
                         className="
-                            text-center
-                            font-serif
-                            text-4xl
-                            font-bold
+                            cinzel
+                            text-3xl
+                            font-black
                             uppercase
                             leading-tight
-                            tracking-wide
+                            tracking-tight
                             text-accent-light
-                            sm:text-5xl
-                            md:text-6xl
-                            lg:text-[58px]
+                            [text-shadow:0_0_18px_rgba(237,217,181,0.25),0_0_36px_rgba(237,217,181,0.4)]
+                            sm:text-4xl
+                            md:text-5xl
+                            lg:text-6xl
                         "
                     >
                         Official Film Submission
@@ -151,10 +165,10 @@ function Register() {
 
                     <p
                         className="
-                            mt-5
+                            mt-3
                             text-center
                             text-sm
-                            text-white/60
+                            text-accent1
                             sm:text-base
                         "
                     >
@@ -167,19 +181,41 @@ function Register() {
                     <form
                         onSubmit={handleSubmit}
                         className="
+                            relative
                             mt-12
                             w-full
                             max-w-207.5
+                            overflow-hidden
                             rounded-2xl
                             border
-                            border-primary-light
-                            bg-primary-light/40
+                            border-[rgba(237,217,181,0.15)]
+                            bg-[rgba(255,255,255,0.03)]
                             p-6
-                            sm:mt-14
+                            shadow-[0_24px_80px_rgba(0,0,0,0.5)]
+                            backdrop-blur-lg
+                            sm:mt-10
                             sm:p-8
                             md:p-10
                         "
                     >
+
+                        {/* Form top light */}
+
+                        <div
+                            className="
+                                pointer-events-none
+                                absolute
+                                left-10
+                                right-10
+                                top-0
+                                h-px
+                                bg-linear-to-r
+                                from-transparent
+                                via-[rgba(237,217,181,0.5)]
+                                to-transparent
+                            "
+                        />
+
 
                         {/* Name of Filmmaker */}
 
@@ -189,12 +225,7 @@ function Register() {
                             value={formData.filmmakerName}
                             onChange={handleChange}
                             helperText="Enter the primary filmmaker name."
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -207,12 +238,7 @@ function Register() {
                             onChange={handleChange}
                             helperText="Official title of your film."
                             className="mt-6"
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -222,63 +248,70 @@ function Register() {
 
                             <label
                                 className="
-            mb-2
-            block
-            text-[11px]
-            font-bold
-            uppercase
-            tracking-wider
-            text-accent-light
-        "
+                                    mb-2
+                                    block
+                                    text-[11px]
+                                    font-bold
+                                    uppercase
+                                    tracking-wider
+                                    text-accent-light
+                                "
                             >
                                 Duration (HH : MM : SS)
                             </label>
 
-                            <div className="flex w-full gap-2 sm:gap-3">
+                            <div
+                                className="
+                                    flex
+                                    w-full
+                                    gap-2
+                                    sm:gap-3
+                                "
+                            >
+
+                                {/* Hours */}
 
                                 <InputField
                                     name="hours"
-                                    type="number"
+                                    type="text"
                                     value={formData.hours}
                                     onChange={handleChange}
                                     placeholder="HH"
-                                    inputClassName="
-                h-11
-                w-full
-                px-3
-                text-center
-                text-sm
-            "
+                                    inputClassName={`
+                                        ${durationInputClassName}
+                                        [appearance:textfield]
+                                    `}
+                                    className="w-full"
                                 />
+
+                                {/* Minutes */}
 
                                 <InputField
                                     name="minutes"
-                                    type="number"
+                                    type="text"
                                     value={formData.minutes}
                                     onChange={handleChange}
                                     placeholder="MM"
-                                    inputClassName="
-                h-11
-                w-full
-                px-3
-                text-center
-                text-sm
-            "
+                                    inputClassName={`
+                                        ${durationInputClassName}
+                                        [appearance:textfield]
+                                    `}
+                                    className="w-full"
                                 />
+
+                                {/* Seconds */}
 
                                 <InputField
                                     name="seconds"
-                                    type="number"
+                                    type="text"
                                     value={formData.seconds}
                                     onChange={handleChange}
                                     placeholder="SS"
-                                    inputClassName="
-                h-11
-                w-full
-                px-3
-                text-center
-                text-sm
-            "
+                                    inputClassName={`
+                                        ${durationInputClassName}
+                                        [appearance:textfield]
+                                    `}
+                                    className="w-full"
                                 />
 
                             </div>
@@ -296,10 +329,11 @@ function Register() {
                             onChange={handleChange}
                             className="mt-6"
                             inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
+                                text-accent-light
+                                uppercase
+                                [color-scheme:dark]
+                                [&::-webkit-calendar-picker-indicator]:opacity-100
+                                [&::-webkit-calendar-picker-indicator]:invert
                             "
                         />
 
@@ -314,12 +348,7 @@ function Register() {
                             onChange={handleChange}
                             helperText="Google Drive links only."
                             className="mt-6"
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -333,12 +362,7 @@ function Register() {
                             onChange={handleChange}
                             helperText="Upload privately and share link."
                             className="mt-6"
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -350,12 +374,7 @@ function Register() {
                             value={formData.castDetails}
                             onChange={handleChange}
                             className="mt-6"
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -367,12 +386,7 @@ function Register() {
                             value={formData.producerDetails}
                             onChange={handleChange}
                             className="mt-6"
-                            inputClassName="
-                                h-11
-                                w-full
-                                px-4
-                                text-sm
-                            "
+                            inputClassName={inputClassName}
                         />
 
 
@@ -386,13 +400,12 @@ function Register() {
                             onChange={handleChange}
                             className="mt-6"
                             inputClassName="
-        min-h-[150px]
-        w-full
-        px-4
-        py-3
-        text-sm
-        resize-none
-    "
+                                min-h-[150px]
+                                w-full
+                                resize-none
+                                px-4
+                                py-3
+                            "
                         />
 
 
@@ -400,12 +413,13 @@ function Register() {
 
                         <div
                             className="
-                                mt-2
+                                mt-6
                                 rounded-xl
                                 border
-                                border-primary-light
-                                bg-primary-light/20
+                                border-[rgba(237,217,181,0.15)]
+                                bg-[rgba(255,255,255,0.03)]
                                 p-6
+                                backdrop-blur-md
                             "
                         >
 
@@ -419,26 +433,30 @@ function Register() {
                                     font-bold
                                     uppercase
                                     tracking-[0.15em]
-                                    text-accent-light
+                                    text-primary2
                                 "
                             >
+
                                 <span
                                     className="
-        flex
-        h-7
-        w-7
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-accent/40
-        text-accent-light
-    "
+                                        flex
+                                        h-8
+                                        w-8
+                                        shrink-0
+                                        items-center
+                                        justify-center
+                                        rounded-full
+                                        border
+                                        border-primary-dark1
+                                        bg-rose-dark1
+                                        text-accent-light
+                                    "
                                 >
-                                    <CreditCard size={15} strokeWidth={1.8} />
+                                    <GoCreditCard size={17} />
                                 </span>
 
                                 Payment & Verification
+
                             </h2>
 
 
@@ -449,23 +467,25 @@ function Register() {
                                     mt-6
                                     rounded-lg
                                     border
-                                    border-primary-light
-                                    bg-primary-light/20
+                                    border-[rgba(237,217,181,0.15)]
+                                    bg-[rgba(255,255,255,0.03)]
                                     p-5
+                                    backdrop-blur-md
                                 "
                             >
 
                                 <p
                                     className="
-                                        text-[11px]
+                                        text-[13px]
                                         font-bold
                                         uppercase
                                         tracking-wider
-                                        text-accent-light
+                                        text-brown
                                     "
                                 >
                                     Step 1 — Complete Payment Form
                                 </p>
+
 
                                 <p
                                     className="
@@ -486,17 +506,18 @@ function Register() {
                                 <Button
                                     type="button"
                                     className="
-        mt-4
-        flex
-        items-center
-        gap-3
-        bg-primary-light
-        px-5
-        py-2.5
-        text-sm
-        text-accent-light!
-        hover:bg-primary
-    "
+                                        mt-4
+                                        flex
+                                        items-center
+                                        gap-3
+                                        border-secondary-dark
+                                        bg-blue
+                                        px-5
+                                        py-2.5
+                                        text-sm
+                                        text-blue
+                                        hover:bg-primary
+                                    "
                                 >
                                     <FaExternalLinkAlt size={13} />
 
@@ -518,12 +539,7 @@ function Register() {
                                     value={formData.transactionUtr}
                                     onChange={handleChange}
                                     placeholder="e.g. 123456789012"
-                                    inputClassName="
-                                        h-11
-                                        w-full
-                                        px-4
-                                        text-sm
-                                    "
+                                    inputClassName={inputClassName}
                                 />
 
                             </div>
@@ -538,8 +554,8 @@ function Register() {
                                     gap-3
                                     rounded-lg
                                     border
-                                    border-accent/40
-                                    bg-accent/10
+                                    border-orange
+                                    bg-orange
                                     p-4
                                 "
                             >
@@ -554,7 +570,7 @@ function Register() {
                                     className="
                                         text-xs
                                         leading-5
-                                        text-accent-light
+                                        text-orange
                                     "
                                 >
                                     <strong>
@@ -577,15 +593,21 @@ function Register() {
                         <Button
                             type="submit"
                             className="
-        cinzel
-        mt-6
-        w-full
-        px-6
-        py-3
-        text-sm
-        font-bold
-        tracking-widest
-    "
+                                cinzel
+                                mt-6
+                                w-full
+                                border-primary-light
+                                bg-primary-light
+                                px-6
+                                py-3
+                                text-sm
+                                font-bold
+                                tracking-widest
+                                text-accent-light
+                                hover:-translate-y-0.5
+                                hover:bg-primary-light
+                                hover:shadow-[0_10px_30px_rgba(139,46,46,0.35)]
+                            "
                         >
                             REGISTER NOW
                         </Button>

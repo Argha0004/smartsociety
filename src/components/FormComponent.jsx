@@ -12,8 +12,8 @@ function InputField({
 }) {
     return (
         <div className={className}>
-
             {/* Label */}
+
             <label
                 htmlFor={name}
                 className="
@@ -30,6 +30,7 @@ function InputField({
             </label>
 
             {/* Textarea */}
+
             {type === "textarea" ? (
                 <textarea
                     id={name}
@@ -39,23 +40,35 @@ function InputField({
                     placeholder={placeholder}
                     required={required}
                     className={`
+                        min-h-37.5
+                        w-full
+                        resize-none
                         rounded-lg
                         border
-                        border-primary-light
-                        bg-primary-light/30
-                        text-white
+                        border-[#edd9b526]
+                        bg-[#ffffff08]
+                        px-4
+                        py-3
+                        text-sm
+                        text-accent-light
                         outline-none
-                        transition
+                        transition-all
+                        duration-300
+                        ease-out
                         placeholder:text-white/40
-                        focus:border-accent
-                        focus:ring-1
-                        focus:ring-accent
+                        hover:border-[#edd9b573]
+                        hover:ring-1
+                        hover:ring-[#edd9b526]
+                        focus:border-accent-light
+                        focus:ring-2
+                        focus:ring-[#edd9b540]
+                        focus:ring-offset-0
                         ${inputClassName}
                     `}
                 />
             ) : (
-
                 /* Normal Input */
+
                 <input
                     id={name}
                     name={name}
@@ -65,33 +78,42 @@ function InputField({
                     placeholder={placeholder}
                     required={required}
                     className={`
-                        rounded-lg
+                        h-11
+                        w-full
+                        rounded-md
                         border
-                        border-primary-light
-                        bg-primary-light/30
-                        text-white
+                        border-[rgba(237,217,181,0.15)]
+                        bg-[rgba(255,255,255,0.03)]
+                        px-4
+                        text-sm
+                        text-accent-light
                         outline-none
-                        transition
+                        transition-all
+                        duration-300
+                        ease-out
                         placeholder:text-white/40
-                        focus:border-accent
-                        focus:ring-1
-                        focus:ring-accent
+                        hover:border-[rgba(237,217,181,0.45)]
+                        hover:ring-1
+                        hover:ring-[rgba(237,217,181,0.15)]
+                        focus:border-accent-light
+                        focus:ring-2
+                        focus:ring-[rgba(237,217,181,0.25)]
+                        focus:ring-offset-0
                         ${inputClassName}
                     `}
                 />
             )}
 
             {/* Helper Text */}
+
             {helperText && (
                 <p className="mt-1.5 text-xs text-white/40">
                     {helperText}
                 </p>
             )}
-
         </div>
     );
 }
-
 
 function Button({
     children,
@@ -107,11 +129,12 @@ function Button({
                 rounded-lg
                 border
                 border-primary-light
-                
                 font-semibold
                 tracking-wide
                 text-accent-light
-                transition
+                transition-all
+                duration-300
+                ease-out
                 hover:bg-primary
                 ${className}
             `}
@@ -121,8 +144,4 @@ function Button({
     );
 }
 
-
-export {
-    InputField,
-    Button,
-};
+export { InputField, Button };

@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import AppRoute from "./routes/AppRoute"
+// import { useState } from 'react'
+// import AppRoute from "./routes/AppRoute"
 
-function App() {
+// function App() {
 
-  return (
-    <>
-      return <AppRoute />;
-    </>
-  )
-}
+//   return (
+//     <>
+//       return <AppRoute />;
+//     </>
+//   )
+// }
 
-export default App;
+// export default App;

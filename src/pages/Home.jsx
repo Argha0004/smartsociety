@@ -628,8 +628,8 @@ function Home() {
                       relative
                       rounded-xl
                       border
-                      border-accent/30
-                      bg-accent/8
+                      border-dark2
+                      bg-dark4
                       px-6
                       py-4
                       text-left
@@ -711,8 +711,8 @@ function Home() {
         justify-center
         rounded-xl
         border
-        border-primary-light/35
-        bg-primary-light/15
+        border-dark2
+        bg-dark4
         px-4
         py-3
         backdrop-blur
@@ -757,6 +757,7 @@ function Home() {
                       type="button"
                       onClick={() => navigate(action.path)}
                       className={`
+                        oswald
               rounded-lg
               border
               px-6
@@ -765,7 +766,8 @@ function Home() {
               font-semibold
               uppercase
               tracking-wide
-              transition-colors
+              
+              transition-transform duration-300 hover:-translate-y-0.5
               ${action.type === "primary"
                           ? `
                     border-primary-light
@@ -774,10 +776,11 @@ function Home() {
                     hover:bg-primary
                   `
                           : `
-                    border-accent-light/40
-                    bg-transparent
+                    border-primary-light1
+                    bg-dark4
                     text-accent-light
                     hover:bg-primary-light/20
+                    
                   `
                         }
             `}
@@ -824,9 +827,9 @@ function Home() {
         overflow-hidden
         rounded-2xl
         border
-        border-accent/25
+        border-dark2
         bg-primary
-        shadow-[0_0_60px_rgba(139,46,46,0.2),0_32px_80px_rgba(0,0,0,0.6)]
+        shadow-[#8b2e2e33_0_0_60px_0,#00000099_0_32px_80px_0]   
       "
               >
                 <img
@@ -888,68 +891,85 @@ function Home() {
                       type="button"
                       aria-label="Play trailer"
                       className="
-    group
-    relative
-    flex
-    h-16
-    w-16
-    items-center
-    justify-center
-    rounded-full
-    border-2
-    border-accent-light
-    bg-transparent
-    shadow-[0_0_24px_rgba(237,217,181,0.08),0_0_48px_rgba(139,46,46,0.2)]
-    transition-transform
-    duration-200
-    hover:scale-110
-    active:scale-95
-    focus:outline-none
-    sm:h-20
-    sm:w-20
-  "
+        group
+        relative
+        flex
+        h-16
+        w-16
+        items-center
+        justify-center
+        rounded-full
+        border-2
+        border-accent-light
+        bg-primary-light
+        shadow-[0_0_24px_rgba(237,217,181,0.08),0_0_48px_rgba(139,46,46,0.2)]
+        transition-transform
+        duration-200
+        hover:scale-110
+        active:scale-95
+        focus:outline-none
+        sm:h-20
+        sm:w-20
+    "
                     >
+                      {/* Ping animation */}
+                      <span
+                        className="
+            pointer-events-none
+            absolute
+            h-full
+            w-full
+            rounded-full
+            bg-primary-light
+            animate-ping
+        "
+                      />
+
                       <Play
                         className="
-      ml-1
-      h-6
-      w-6
-      text-accent-light
-      sm:h-7
-      sm:w-7
-    "
+            relative
+            z-10
+            ml-1
+            h-6
+            w-6
+            text-accent-light
+            transition-transform
+            duration-200
+            
+            sm:h-7
+            sm:w-7
+        "
                         fill="currentColor"
                         strokeWidth={0}
                       />
 
-                      {/* Ambient glow blobs */}
-
+                      {/* Ambient glow */}
                       <div
                         className="
-      pointer-events-none
-      absolute
-      -left-8
-      -top-8
-      h-36
-      w-36
-      rounded-full
-      bg-accent/15
-      blur-3xl
-    "
+            pointer-events-none
+            absolute
+            -left-8
+            -top-8
+            h-36
+            w-36
+            rounded-full
+            bg-accent/15
+            blur-3xl
+        "
                       />
 
                       <div
                         className="
-      pointer-events-none
-      absolute
-      -bottom-8
-      -right-8
-      h-36
-      w-36
-      rounded-full
-      bg-accent/15
-      blur-3xl
-    "
+            pointer-events-none
+            absolute
+            -bottom-8
+            -right-8
+            h-36
+            w-36
+            rounded-full
+            bg-accent/15
+            blur-3xl
+        "
                       />
                     </button>
                   </div>

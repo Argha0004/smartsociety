@@ -224,5 +224,141 @@
         "logo": "/assets/smart-logo.png"
       }
     ]
+  },
+
+  "register": {
+    "page": {
+      "badge": "CFCCF 2027 · KOLKATA CHAPTER",
+      "title": "Official Film Submission",
+      "subtitle": "Submit your work to the CFCCF Festival — Kolkata Chapter 2027"
+    },
+
+    "form": {
+      "filmmakerName": {
+        "label": "Name of Filmmaker",
+        "name": "filmmakerName",
+        "helperText": "Enter the primary filmmaker name."
+      },
+
+      "projectTitle": {
+        "label": "Title of Project",
+        "name": "projectTitle",
+        "helperText": "Official title of your film."
+      },
+
+      "duration": {
+        "label": "Duration (HH : MM : SS)",
+        "fields": [
+          {
+            "name": "hours",
+            "placeholder": "HH"
+          },
+          {
+            "name": "minutes",
+            "placeholder": "MM"
+          },
+          {
+            "name": "seconds",
+            "placeholder": "SS"
+          }
+        ]
+      },
+
+      "productionDate": {
+        "label": "Production Date",
+        "name": "productionDate"
+      },
+
+      "trailerDriveLink": {
+        "label": "Trailer Drive Link",
+        "name": "trailerDriveLink",
+        "type": "url",
+        "helperText": "Google Drive links only."
+      },
+
+      "fullFilmDriveLink": {
+        "label": "Full Film Drive Link",
+        "name": "fullFilmDriveLink",
+        "type": "url",
+        "helperText": "Upload privately and share link."
+      },
+
+      "castDetails": {
+        "label": "Cast Details",
+        "name": "castDetails"
+      },
+
+      "producerDetails": {
+        "label": "Producer Details",
+        "name": "producerDetails"
+      },
+
+      "directorsNote": {
+        "label": "Director's Note",
+        "name": "directorsNote",
+        "type": "textarea"
+      },
+
+      "payment": {
+        "title": "Payment & Verification",
+        "utrLabel": "Step 2 — Enter Transaction UTR Number",
+        "utrName": "transactionUtr",
+        "utrPlaceholder": "e.g. 123456789012"
+      }
+    }
+  },
+  "visitorPass": {
+    "page": {
+      "title": ["Visitor Pass", "Registration"],
+      "description": [
+        "Be part of Kolkata's cinematic celebration — screenings, panels and intimate talks with makers and storytellers.",
+        "Smart Society is a US & Canada-based non-profit that brings powerful short talks and multidisciplinary perspectives to the world."
+      ]
+    },
+
+    "eventInfo": [
+      {
+        "icon": "calendar",
+        "text": "JAN 9, 2027"
+      },
+      {
+        "icon": "location",
+        "text": "KOLKATA, INDIA"
+      },
+      {
+        "icon": "clock",
+        "text": "9:00 AM – 8:00 PM"
+      }
+    ],
+
+    "form": {
+      "title": "Reserve Your Spot",
+      "subtitle": "Limited passes — fill the form below.",
+
+      "fullName": {
+        "label": "Full Name",
+        "name": "fullName",
+        "type": "text",
+        "placeholder": "Your full name"
+      },
+
+      "email": {
+        "label": "Email",
+        "name": "email",
+        "type": "email",
+        "placeholder": "you@example.com"
+      },
+
+      "phone": {
+        "label": "Phone",
+        "name": "phone",
+        "type": "tel",
+        "placeholder": "+91 XXXXXXXXXX"
+      },
+
+      "submitButton": "Get Visitor Pass",
+
+      "terms": "By registering you agree to the festival terms. Passes are non-transferable."
+    }
   }
 }
