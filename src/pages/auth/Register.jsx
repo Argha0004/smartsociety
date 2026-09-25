@@ -188,8 +188,8 @@ function Register() {
                             overflow-hidden
                             rounded-2xl
                             border
-                            border-[rgba(237,217,181,0.15)]
-                            bg-[rgba(255,255,255,0.03)]
+                            border-[#edd9b526]
+                            bg-[#ffffff08]
                             p-6
                             shadow-[0_24px_80px_rgba(0,0,0,0.5)]
                             backdrop-blur-lg
@@ -211,7 +211,7 @@ function Register() {
                                 h-px
                                 bg-linear-to-r
                                 from-transparent
-                                via-[rgba(237,217,181,0.5)]
+                                via-[#edd9b580]
                                 to-transparent
                             "
                         />
@@ -416,8 +416,8 @@ function Register() {
                                 mt-6
                                 rounded-xl
                                 border
-                                border-[rgba(237,217,181,0.15)]
-                                bg-[rgba(255,255,255,0.03)]
+                                border-[#edd9b526]
+                                bg-[#ffffff08]
                                 p-6
                                 backdrop-blur-md
                             "
@@ -467,8 +467,8 @@ function Register() {
                                     mt-6
                                     rounded-lg
                                     border
-                                    border-[rgba(237,217,181,0.15)]
-                                    bg-[rgba(255,255,255,0.03)]
+                                    border-[#edd9b526]
+                                    bg-[#ffffff08]
                                     p-5
                                     backdrop-blur-md
                                 "

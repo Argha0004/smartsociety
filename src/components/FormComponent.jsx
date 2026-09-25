@@ -82,8 +82,8 @@ function InputField({
                         w-full
                         rounded-md
                         border
-                        border-[rgba(237,217,181,0.15)]
-                        bg-[rgba(255,255,255,0.03)]
+                        border-[#edd9b526]
+                        bg-[#ffffff08]
                         px-4
                         text-sm
                         text-accent-light
@@ -92,12 +92,12 @@ function InputField({
                         duration-300
                         ease-out
                         placeholder:text-white/40
-                        hover:border-[rgba(237,217,181,0.45)]
+                        hover:border-[#edd9b573]
                         hover:ring-1
-                        hover:ring-[rgba(237,217,181,0.15)]
+                        hover:ring-[#edd9b526]
                         focus:border-accent-light
                         focus:ring-2
-                        focus:ring-[rgba(237,217,181,0.25)]
+                        focus:ring-[#edd9b540]
                         focus:ring-offset-0
                         ${inputClassName}
                     `}

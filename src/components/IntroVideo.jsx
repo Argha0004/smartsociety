@@ -102,7 +102,7 @@ function IntroVideo() {
                         flex
                         items-center
                         justify-center
-                        left-0
+                        left-1/2
                         -translate-x-1/2
                         gap-2
                         rounded-full
