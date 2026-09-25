@@ -37,7 +37,7 @@ function VisitorPass() {
     };
 
     return (
-        <main className="min-h-screen overflow-hidden bg-[#0b0b0b] text-accent-light">
+        <main className="min-h-screen overflow-hidden bg-[#150e0e] text-accent-light">
             {/* Main section */}
 
             <section className="relative py-16 md:py-20">
@@ -78,7 +78,7 @@ function VisitorPass() {
                             flex
                             w-full
                             flex-col
-                            lg:w-[48%]
+                            lg:w-[40%]
                         "
                     >
                         <h1
@@ -88,9 +88,9 @@ function VisitorPass() {
                                 leading-[0.95]
                                 tracking-tight
                                 text-accent-light
-                                text-5xl
-                                sm:text-6xl
-                                md:text-7xl
+                                text-3xl
+                                sm:text-4xl
+                                md:text-5xl
                             "
                         >
                             {page.title.map((line, index) => (
@@ -161,7 +161,7 @@ function VisitorPass() {
                         className="
                             relative
                             w-full
-                            lg:w-[52%]
+                            lg:w-[60%]
                         "
                     >
                         {/* Decorative left shape */}
@@ -172,13 +172,13 @@ function VisitorPass() {
                                 pointer-events-none
                                 absolute
                                 -left-7
-                                top-8
+                                top-12
                                 hidden
-                                h-36
+                                h-85
                                 w-14
                                 rounded-l-xl
                                 border
-                                border-accent-light/10
+                                border-primary-light1
                                 bg-accent-light/[0.02]
                                 lg:block
                             "
@@ -189,8 +189,8 @@ function VisitorPass() {
                                 relative
                                 rounded-2xl
                                 border
-                                border-[#edd9b526]
-                                bg-[#2a1212]
+                                border-primary-light
+                                bg-primary-dark
                                 p-5
                                 shadow-[0_20px_50px_rgba(0,0,0,0.35)]
                                 backdrop-blur-md

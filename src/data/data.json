@@ -37,7 +37,7 @@
         },
         {
           "label": "VISITORS PASS",
-          "path": "/visitors-pass",
+          "path": "/visitor-pass",
           "type": "outline"
         }
       ],

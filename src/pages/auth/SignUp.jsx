@@ -45,7 +45,7 @@ function SignUp() {
     };
 
     return (
-        <main className="min-h-screen bg-brand-gradient py-16">
+        <main className="overflow-hidden bg-brand-gradient py-16">
             <div className="container mx-auto px-4">
                 <div className="mx-auto max-w-md">
                     <div

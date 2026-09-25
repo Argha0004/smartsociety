@@ -87,7 +87,7 @@ function Rule() {
           {/* Title */}
           <h1
             className="
-                            outfit
+                            oswald
                             mt-1
                             text-3xl
                             font-bold
@@ -130,9 +130,9 @@ function Rule() {
       items-center
       rounded-full
       p-1
-      bg-[rgba(139,46,46,0.12)]
+      bg-[#8b2e2e1f]
       border
-      border-[rgba(139,46,46,0.25)]
+      border-[#8b2e2e40]
     "
           >
             {rulesData.rules.sections.map((section) => (
@@ -193,8 +193,8 @@ function Rule() {
                         overflow-hidden
                         rounded-[15px]
                         border
-                        border-accent/25
-                        bg-primary-dark/20
+                        border-primary-light1
+                        bg-secondery-dark
                         sm:mt-9
                     "
         >
@@ -216,12 +216,12 @@ function Rule() {
               <p
                 className="
     border-b
-    border-accent-light/10
+    border-primary-light
     pb-4
     font-poppins
     text-xs
     leading-5
-    text-accent-light/80
+    text-primary1
     sm:text-sm
     sm:leading-6
   "
@@ -232,13 +232,13 @@ function Rule() {
               {/* Section Heading */}
               <h2
                 className="
-                                    outfit
+                                    oswald
                                     mt-5
                                     text-xl
                                     font-semibold
                                     uppercase
                                     tracking-normal
-                                    text-accent-light
+                                    text-primary2
                                     sm:text-2xl
                                 "
               >
@@ -252,13 +252,13 @@ function Rule() {
                     key={index}
                     className="
         border-b
-        border-accent-light/10
+        border-primary-light
         px-1
         py-3
         font-poppins
         text-xs
         leading-5
-        text-accent-light/80
+        text-primary1
         transition-transform
         duration-200
         ease-out
@@ -267,7 +267,7 @@ function Rule() {
         sm:leading-6
       "
                   >
-                    <span className="mr-1 font-semibold text-accent-light">
+                    <span className="mr-1 font-semibold text-primary1">
                       {index + 1}.
                     </span>
                     {rule}
@@ -282,8 +282,9 @@ function Rule() {
                                 w-full
                                 rounded-xl
                                 border
-                                border-accent-light/20
-                                bg-primary-dark/20
+                                border-primary-light
+                                bg-dark4
+                                
                                 p-4
                                 sm:p-5
                                 lg:w-66.25
@@ -293,11 +294,11 @@ function Rule() {
               <h3
                 className="
                                     font-poppins
-                                    text-[10px]
+                                    text-sm
                                     font-semibold
                                     uppercase
                                     tracking-[0.2em]
-                                    text-accent-light
+                                    text-primary1
                                 "
               >
                 Key Dates
@@ -309,8 +310,9 @@ function Rule() {
                                     mt-5
                                     rounded-xl
                                     border
-                                    border-accent-light/25
-                                    bg-primary-light/20
+                                    border-primary-light
+                                    bg-dark4
+                                    backdrop-blur-md
                                     p-4
                                 "
               >
@@ -321,7 +323,7 @@ function Rule() {
                                         font-medium
                                         uppercase
                                         tracking-wide
-                                        text-accent-light/70
+                                        text-primary1
                                     "
                 >
                   {
@@ -332,11 +334,12 @@ function Rule() {
 
                 <p
                   className="
-                                        outfit
+                                        cinzel
                                         mt-2
                                         text-sm
+                                        md:text-2xl
                                         font-semibold
-                                        text-accent-light
+                                        text-primary2
                                     "
                 >
                   {
@@ -352,7 +355,7 @@ function Rule() {
                                     mt-3
                                     rounded-xl
                                     border
-                                    border-accent-light/20
+                                    border-primary-light
                                     bg-transparent
                                     p-4
                                 "
@@ -416,7 +419,8 @@ function Rule() {
                                     mt-4
                                     w-full
                                     rounded-xl
-                                    border-0
+                                    border
+                                    border-primary-light1
                                     bg-primary-light
                                     px-4
                                     py-3
