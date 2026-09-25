@@ -78,7 +78,7 @@ function FlipCard({ event, index }) {
                 w-full
                 rounded-xl
                 border
-                border-primary/30
+                border-primary-dark1
                 bg-dark3
                 p-4
                 text-center
@@ -147,7 +147,7 @@ function FlipCard({ event, index }) {
                 w-full
                 rounded-xl
                 border
-                border-accent/25
+                border-dark2
                 bg-dark4
                 p-4
                 text-center

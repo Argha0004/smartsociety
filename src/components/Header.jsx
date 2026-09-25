@@ -110,7 +110,7 @@ function Header() {
 
       {/* Navigation */}
 
-      <nav className="w-full bg-primary-dark">
+      <nav className="w-full bg-dark5 backdrop-blur-xl backdrop-saturate-180 border-b border-dark2">
 
         <div
           className="
@@ -324,14 +324,14 @@ function Header() {
 
       ${button.type === "primary"
                       ? `
-            border-[rgba(237,217,181,0.18)]
+            border-[#edd9b52e]
             bg-primary-light
             text-accent-light
             hover:bg-primary
             hover:border-primary
           `
                       : `
-            border-accent/50
+            border-primary-light1
             bg-transparent
             text-accent-light
             hover:border-accent

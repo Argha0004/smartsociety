@@ -6,12 +6,12 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Rules from "../pages/Rule";
 import Jury from "../pages/Jury";
-// import ContactUs from "../pages/ContactUs";
 
 // Auth Pages
 import Register from "../pages/auth/Register";
 import SignIn from "../pages/auth/SignIn";
 import SignUp from "../pages/auth/SignUp";
+import VisitorPass from "../pages/auth/VisitorPass";
 
 
 function AppRoute() {
@@ -45,11 +45,7 @@ function AppRoute() {
                         element={<Jury />}
                     />
 
-                    {/* Contact-Us */}
-                    {/* <Route
-                        path="/contact-us"
-                        element={<ContactUs />}
-                    /> */}
+                    
 
                     
                     {/* Auth */}
@@ -70,6 +66,12 @@ function AppRoute() {
                     <Route
                         path="/sign-up"
                         element={<SignUp />}
+                    />
+
+                    {/* Visitor Pass */}
+                    <Route
+                        path="/visitor-pass"
+                        element={<VisitorPass />}
                     />
                 </Route>
 
